@@ -1,0 +1,81 @@
+/* COLOR PALETTE : Brand colors I chose for Forces Academy */
+/* Used CSS variables in root so any color update only needs one change here*/
+:root {
+    /* Olive greens for primary background tones */
+      --olive: #3a4226;
+      --olive-dark: #2a3019;
+      --olive-darker: #1f2413;
+      --olive-light: #4d572f;
+    /* Gold for buttons, hover effects, borders */
+      --gold: #c8a04e;
+      --gold-light: #d9b86c;
+      --gold-dark: #a8843a;
+    /* Neutral — light background */
+      --cream: #f6f4ee;
+    }
+    body {
+      font-family: 'Poppins', system-ui, sans-serif;
+      color: #2b2b27;
+      background-color: #fff;
+    }
+    /* Navbar */
+    #mainNav {
+      background-color: var(--olive-darker);
+      border-bottom: 2px solid var(--gold);
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .navbar-brand{
+      font-weight: 800;
+      font-size: 1.35rem;
+      color: #fff;
+      letter-spacing: 0.02em;
+    }
+    .brand-sub {
+      font-size: 0.68rem;
+      letter-spacing: 0.25em;
+      color: var(--gold);
+      display: block;
+    }
+    .nav-link {
+      color: #e8e6dd;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 0.9rem !important;
+      position: relative;
+    }
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--gold) !important;
+}
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0.9rem;
+      right: 0.9rem;
+      bottom: 0.2rem;
+      height: 2px;
+      background: var(--gold);
+      transform: scaleX(0);
+      transition: transform 0.25s ease;
+    }
+    .nav-link:hover::after, .nav-link.active::after{ transform: scaleX(1); }
+    
+    .btn-gold {
+      background-color: var(--gold);
+      border: 2px solid var(--gold);
+      color: var(--olive-darker);
+      font-weight: 635;
+      padding: 0.6rem 1.5rem;
+      border-radius: 17px;
+      transition: all 0.25s ease;
+    }
+    .btn-gold:hover {
+      background-color: var(--gold-dark);
+      border-color: var(--gold-dark);
+      color: #fff;
+    }
+    .navbar-toggler{
+        border: 2px solid var(--gold);
+        padding: 4px 5px;
+    }
