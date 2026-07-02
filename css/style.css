@@ -28,7 +28,7 @@
     .navbar-brand{
       font-weight: 800;
       font-size: 1.35rem;
-      color: #fff;
+      color: var(--cream);
       letter-spacing: 0.02em;
     }
     .brand-sub {
@@ -79,3 +79,36 @@
         border: 2px solid var(--gold);
         padding: 4px 5px;
     } 
+/* HERO SECTION */
+
+    .hero{
+        background: linear-gradient(135deg, #1f2413 0%, #3a4226 100%);
+        min-height: 100vh;
+    }
+    .hero-overlay {
+       background: rgba(0, 0, 0, 0.45);
+       min-height: 100vh;
+       display: flex;
+       align-items: center;
+    }
+    .hero-content{
+        color: var(--cream);
+    }
+    .hero-divider{
+        max-width: 100px;
+        color: var(--gold-light);
+    }
+    .cta2{
+        border: 1px solid var(--gold);
+        border-radius: 0%;
+        color: var(--cream);
+        font-weight: 635;
+        padding: 0.6rem 1.5rem;
+    }
+    .cta1{
+        border-radius: 0%;
+    }
+    .cta2:hover{
+        border: 1px solid var(--cream);
+        color: var(--gold);
+    }
