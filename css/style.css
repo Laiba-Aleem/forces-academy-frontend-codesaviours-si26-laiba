@@ -20,7 +20,9 @@
     }
     /* Navbar */
     #mainNav {
-      background-color: var(--olive-darker);
+      
+      background-color: rgba(31, 36, 19, 0.97);
+      backdrop-filter: blur(6px);
       border-bottom: 2px solid var(--gold);
       padding-left: 30px;
       padding-right: 30px;
@@ -30,6 +32,9 @@
       font-size: 1.35rem;
       color: var(--cream);
       letter-spacing: 0.02em;
+    }
+    .navbar-brand:hover {
+      color: var(--cream);
     }
     .brand-sub {
       font-size: 0.68rem;
@@ -75,14 +80,22 @@
       border-color: var(--gold-dark);
       color: #fff;
     }
-    .navbar-toggler{
-        border: 2px solid var(--gold);
-        padding: 4px 5px;
-    } 
+    .navbar-toggler {
+      border: 2px solid var(--gold);
+      padding: 4px 5px;
+    }
+    .navbar-toggler-icon {
+      filter: invert(76%) sepia(35%) saturate(638%) hue-rotate(358deg);
+    }
+    .navbar-toggler:focus {
+       box-shadow: none;
+    }
 /* HERO SECTION */
 
     .hero{
-        background: linear-gradient(135deg, #1f2413 0%, #3a4226 100%);
+        background: 
+    linear-gradient(90deg, rgba(31,36,19,0.85) 0%, rgba(42,48,25,0.55) 100%),
+    url('../images/hero.jpg') center/cover no-repeat;
         min-height: 100vh;
     }
     .hero-overlay {
