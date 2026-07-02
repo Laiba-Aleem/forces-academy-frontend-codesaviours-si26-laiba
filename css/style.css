@@ -17,7 +17,7 @@
       font-family: 'Poppins', system-ui, sans-serif;
       color: #2b2b27;
       background-color: #fff;
-      cursor: url('../images/golden-cursor.png'), auto;
+      cursor: url('../images/white-cursor.png'), auto;
     }
     /* Navbar */
     #mainNav {
@@ -78,8 +78,8 @@
       transition: all 0.25s ease;
     }
     .btn-gold:hover {
-      background-color: var(--gold-dark);
-      border-color: var(--gold-dark);
+      background-color: var(--gold-dark) !important;
+      border-color: var(--gold-dark) !important;
       color: #fff;
       transform: scale(1.05);
     }
