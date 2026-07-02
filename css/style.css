@@ -17,6 +17,7 @@
       font-family: 'Poppins', system-ui, sans-serif;
       color: #2b2b27;
       background-color: #fff;
+      cursor: url('../images/golden-cursor.png'), auto;
     }
     /* Navbar */
     #mainNav {
@@ -46,13 +47,14 @@
       color: #e8e6dd;
       font-weight: 500;
       font-size: 0.95rem;
+      letter-spacing: 0.2px;
       padding: 0.5rem 0.9rem !important;
       position: relative;
     }
     .nav-link:hover,
     .nav-link.active {
       color: var(--gold) !important;
-}
+    }
     .nav-link::after {
       content: '';
       position: absolute;
@@ -79,6 +81,7 @@
       background-color: var(--gold-dark);
       border-color: var(--gold-dark);
       color: #fff;
+      transform: scale(1.05);
     }
     .navbar-toggler {
       border: 2px solid var(--gold);
@@ -92,11 +95,11 @@
     }
 /* HERO SECTION */
 
-    .hero{
-        background: 
+    .hero {
+     background: 
     linear-gradient(90deg, rgba(31,36,19,0.85) 0%, rgba(42,48,25,0.55) 100%),
     url('../images/hero.jpg') center/cover no-repeat;
-        min-height: 100vh;
+  min-height: 100vh;
     }
     .hero-overlay {
        background: rgba(0, 0, 0, 0.45);
@@ -106,6 +109,9 @@
     }
     .hero-content{
         color: var(--cream);
+    }
+    h1{
+    text-shadow: 0 2px 8px rgba(0,0,0,0.4);
     }
     .hero-divider{
         max-width: 100px;
@@ -117,6 +123,8 @@
         color: var(--cream);
         font-weight: 635;
         padding: 0.6rem 1.5rem;
+          transition: transform 0.2s ease;
+
     }
     .cta1{
         border-radius: 0%;
@@ -124,4 +132,5 @@
     .cta2:hover{
         border: 1px solid var(--cream);
         color: var(--gold);
+        transform: scale(1.05);
     }
