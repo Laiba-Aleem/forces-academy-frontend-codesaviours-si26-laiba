@@ -21,12 +21,20 @@
     }
     /* Navbar */
     #mainNav {
-      
-      background-color: rgba(31, 36, 19, 0.97);
-      backdrop-filter: blur(6px);
+      background: linear-gradient(
+      135deg, 
+    rgba(31, 36, 19, 0.92) 70%, 
+    rgba(131, 120, 46, 0.60) 100%
+    );
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(9px);
       border-bottom: 2px solid var(--gold);
       padding-left: 30px;
       padding-right: 30px;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      z-index: 1050;
     }
     .navbar-brand{
       font-weight: 800;
@@ -84,7 +92,7 @@
       transform: scale(1.05);
     }
     .navbar-toggler {
-      border: 2px solid var(--gold);
+      border: 2px solid var(--gold-dark);
       padding: 4px 5px;
     }
     .navbar-toggler-icon {
@@ -94,18 +102,23 @@
        box-shadow: none;
     }
 /* HERO SECTION */
-
     .hero {
-     background: 
-    linear-gradient(90deg, rgba(31,36,19,0.85) 0%, rgba(42,48,25,0.55) 100%),
-    url('../images/hero.jpg') center/cover no-repeat;
-  min-height: 100vh;
+       background-image: linear-gradient(
+       to right, 
+     rgba(31, 36, 19, 0.95) 0%, 
+     rgba(31, 36, 19, 0.75) 45%, 
+     rgba(31, 36, 19, 0.20) 100%
+    ), url('../images/hero.png');
+       background-size: cover;
+       background-position: center center;
+       position: relative;
     }
     .hero-overlay {
-       background: rgba(0, 0, 0, 0.45);
+       background: rgba(0, 0, 0, 0.30);
        min-height: 100vh;
        display: flex;
        align-items: center;
+       padding-top: 80px;
     }
     .hero-content{
         color: var(--cream);
@@ -124,10 +137,9 @@
         font-weight: 635;
         padding: 0.6rem 1.5rem;
           transition: transform 0.2s ease;
-
     }
     .cta1{
-        border-radius: 0%;
+        border-radius: 0% !important;
     }
     .cta2:hover{
         border: 1px solid var(--cream);
