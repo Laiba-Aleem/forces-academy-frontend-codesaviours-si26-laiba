@@ -23,18 +23,14 @@
     #mainNav {
       background: linear-gradient(
       135deg, 
-    rgba(31, 36, 19, 0.92) 70%, 
-    rgba(131, 120, 46, 0.60) 100%
+    rgba(31, 36, 19, 0.99) 70%, 
+    rgba(131, 120, 46, 0.91) 100%
     );
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(9px);
       border-bottom: 2px solid var(--gold);
       padding-left: 30px;
       padding-right: 30px;
-      position: absolute;
-      top: 0;
-      width: 100%;
-      z-index: 1050;
     }
     .navbar-brand{
       font-weight: 800;
@@ -111,7 +107,6 @@
     ), url('../images/hero.png');
        background-size: cover;
        background-position: center center;
-       position: relative;
     }
     .hero-overlay {
        background: rgba(0, 0, 0, 0.30);
