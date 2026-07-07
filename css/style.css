@@ -19,6 +19,11 @@
       background-color: #fff;
       cursor: url('../images/white-cursor.png'), auto;
     }
+    h2,h5 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      letter-spacing: 0.3px;
+    }
     /* Navbar */
     #mainNav {
       background: linear-gradient(
@@ -107,6 +112,7 @@
     ), url('../images/hero.png');
        background-size: cover;
        background-position: center center;
+       background-attachment: fixed;
     }
     .hero-overlay {
        background: rgba(0, 0, 0, 0.30);
@@ -131,7 +137,7 @@
         color: var(--cream);
         font-weight: 635;
         padding: 0.6rem 1.5rem;
-          transition: transform 0.2s ease;
+        transition: transform 0.2s ease;
     }
     .cta1{
         border-radius: 0% !important;
@@ -140,4 +146,69 @@
         border: 1px solid var(--cream);
         color: var(--gold);
         transform: scale(1.05);
+    }
+
+/* Call To Action */
+    .cta-section {
+        background-color: var(--olive);
+        color: var(--cream);
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+/* FOOTER */
+
+    .site-footer {
+       background-color: var(--olive-darker);
+       color: #cfccc2;
+       padding: 60px 0 20px 0;
+    }
+   .site-footer h5 {
+       color: var(--cream);
+       margin-bottom: 20px;
+    }
+    .site-footer a {
+       color: #cfccc2;
+       transition: color 0.25s ease, padding-left 0.25s ease;
+    }
+    .site-footer a:hover {
+       color: var(--gold-light);
+       padding-left: 4px;
+    }
+    .footer-links {
+       list-style: none;
+       padding: 0;
+    }
+    .footer-links li {
+       margin-bottom: 10px;
+    }
+    .footer-links a{
+       text-decoration: none;
+    }
+    .social-icons a {
+       display: inline-flex;
+       align-items: center;
+       justify-content: center;
+       width: 40px;
+       height: 40px;
+       border-radius: 50%;
+       background-color: var(--olive-light);
+       color: var(--cream);
+       margin-right: 8px;
+       transition: all 0.25s ease;
+    }
+    .contact-footer i{
+        color: var(--gold);
+    }
+    .social-icons a:hover {
+       background-color: var(--gold);
+       color: var(--olive-darker);
+       transform: translateY(-3px);
+    }
+    .footer-bottom {
+       border-top: 1px solid rgba(255, 255, 255, 0.1);
+       margin-top: 40px;
+       padding-top: 20px;
+       text-align: center;
+       font-size: 0.9rem;
     }
