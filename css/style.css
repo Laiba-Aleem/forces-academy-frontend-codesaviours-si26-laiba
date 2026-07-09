@@ -218,12 +218,12 @@
     /* Banner */
     .page-banner {
         position: relative;
-        padding: 90px 0 30px 0;
+        padding: 70px 0 30px 0;
         background-image: linear-gradient(
        rgba(31, 36, 19, 0.82),
        rgba(31, 36, 19, 0.82)
         ),
-        url("/images/banner.jpg");
+        url("../images/banner.jpg");
         background-size: cover;
         background-position: center;
         color: var(--cream);
@@ -295,3 +295,23 @@
     .icon-center{
         margin: 0 auto 1rem auto;
     }
+
+    /* ---------- Courses ---------- */
+.list-group {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.list-group-item{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  border-bottom: 1px dashed var(--gold-light);
+  color: #555;
+}
+
+.list-group-item i {
+  color: var(--gold-dark);
+}
