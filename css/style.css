@@ -6,23 +6,12 @@
       --olive-dark: #2a3019;
       --olive-darker: #1f2413;
       --olive-light: #4d572f;
-    /* Gold for buttons, hover effects, borders */
+    /* Gold for buttons, hover effects, borders, cursor */
       --gold: #c8a04e;
       --gold-light: #d9b86c;
       --gold-dark: #a8843a;
     /* Neutral — light background */
       --cream: #f6f4ee;
-    }
-    body {
-      font-family: 'Poppins', system-ui, sans-serif;
-      color: #2b2b27;
-      background-color: #fff;
-      cursor: url('../images/white-cursor.png'), auto;
-    }
-    h2,h5 {
-      font-family: "Poppins", sans-serif;
-      font-weight: 700;
-      letter-spacing: 0.3px;
     }
     /* Navbar */
     #mainNav {
@@ -116,7 +105,7 @@
     }
     .hero-overlay {
        background: rgba(0, 0, 0, 0.30);
-       min-height: 100vh;
+       min-height: 90vh;
        display: flex;
        align-items: center;
        padding-top: 80px;
@@ -223,7 +212,7 @@
        rgba(31, 36, 19, 0.82),
        rgba(31, 36, 19, 0.82)
         ),
-        url("../images/banner.jpg");
+        url("../images/banner-adm.jpg");
         background-size: cover;
         background-position: center;
         color: var(--cream);
@@ -233,7 +222,6 @@
         font-size: 2.6rem;
         margin-bottom: 50px;
     }
-
     .section-padding {
         padding-top: 80px;
     }
@@ -265,14 +253,12 @@
     }
     .card {
         background-color: #fff;
-        border: 1px solid var(--gold-light);
+        border: 1px solid rgba(0,0,0,0.08);
+        border-top: 3px solid var(--gold-light);
         border-radius: 12px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         height: 100%;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 16px 30px rgba(58, 66, 38, 0.18);
     }
     .card .card-body {
         padding: 26px 26px 22px 26px;
@@ -315,3 +301,178 @@
 .list-group-item i {
   color: var(--gold-dark);
 }
+
+/* ---------- Admission Page ---------- */
+.step-number {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: var(--gold);
+  color: var(--olive-darker);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.fee-table th {
+  background-color: var(--olive);
+  color: var(--cream);
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--olive);
+  color: var(--cream);
+}
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.15rem rgba(200, 160, 78, 0.5);
+}
+.accordion-body{
+    background-color: #FCFAF7;
+}
+/* 1. Collapsed state icon color */
+.accordion-button.collapsed::after {
+  background-image: var(--bs-accordion-btn-icon) !important;
+  filter: invert(30%) sepia(21%) saturate(913%) hue-rotate(34deg) brightness(97%) contrast(85%) !important;
+}
+/* 2. Opened state icon color*/
+.accordion-button:not(.collapsed)::after {
+  background-image: var(--bs-accordion-btn-icon) !important;/* bootstrap icon added */
+  filter: invert(53%) sepia(50%) saturate(464%) hue-rotate(12deg) brightness(91%) contrast(87%) !important;
+}
+
+/* Eligibility Cards */
+
+.elig-card {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.elig-header {
+   background-color: #fff;
+  color: var(--olive-darker);
+  padding: 20px;
+}
+.elig-header h5 {
+  color: var(--olive-dark);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.elig-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.88rem;
+  color: var(--olive-light);
+  margin-bottom: 14px;
+}
+.elig-toggle {
+  background-color: var(--gold);
+  color: var(--olive-darker);
+  border: none;
+  border-radius: 6px;
+  padding: 7px 16px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: 100%;
+}
+.elig-toggle:hover {
+  background-color: var(--gold-dark);
+  color: #fff;
+}
+.elig-body {
+  background-color: var(--cream);
+  padding: 18px 20px;
+}
+.elig-body ul {
+  padding-left: 18px;
+  margin: 0;
+}
+.elig-body ul li {
+  margin-bottom: 8px;
+  color: var(--olive-dark);
+  font-size: 0.95rem;
+}
+
+/* Required Documents */
+.doc-card {
+  background: #fff;
+  border: 1px solid var(--gold-light);
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.doc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+.doc-card-header h5 {
+  color: var(--olive-dark);
+  font-weight: 700;
+  margin: 0;
+}
+.doc-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.doc-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: #444;
+  line-height: 1.5;
+}
+.doc-list .bi-check-circle-fill {
+  color: var(--olive);
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.doc-list .bi-dash-circle {
+  font-size: 1rem;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+.badge-req {
+  background-color: var(--olive-light);
+  color: var(--cream);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+.badge-opt {
+  background-color: var(--gold-light);
+  color: var(--olive-darker);
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  margin-left: 4px;
+}
+.doc-note {
+  background-color: rgba(200, 160, 78, 0.12);
+  border-left: 4px solid var(--gold);
+  border-radius: 6px;
+  padding: 14px 18px;
+  color: var(--olive-dark);
+  font-size: 0.92rem;
+}
+
+/* all cards hover for ease */
+    .card:hover, .elig-card:hover, .doc-card:hover{
+        transform: translateY(-8px);
+        box-shadow: 0 16px 30px rgba(58, 66, 38, 0.18);
+    }
