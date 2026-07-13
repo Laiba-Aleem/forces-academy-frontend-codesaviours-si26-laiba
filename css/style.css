@@ -316,7 +316,7 @@
   flex-shrink: 0;
 }
 
-.fee-table th {
+.fee-table th{
   background-color: var(--olive);
   color: var(--cream);
 }
@@ -476,3 +476,203 @@
         transform: translateY(-8px);
         box-shadow: 0 16px 30px rgba(58, 66, 38, 0.18);
     }
+
+/* Unified Filter Bar */
+.results-filter-bar {
+  display: flex;
+  justify-content: center;
+}
+
+.unified-bar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid var(--gold-light);
+  border-radius: 50px;
+  padding: 6px 6px 6px 20px;
+  gap: 0;
+  width: 100%;
+  max-width: 900px;
+  box-shadow: 0 4px 20px rgba(58, 66, 38, 0.1);
+}
+
+.unified-search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+  min-width: 180px;
+}
+
+.unified-search i {
+  color: var(--gold-dark);
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.unified-search input {
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.92rem;
+  color: #444;
+  width: 100%;
+  background: transparent;
+}
+
+.unified-search input::placeholder {
+  color: #aaa;
+}
+
+.bar-divider {
+  width: 1px;
+  height: 28px;
+  background-color: var(--gold-light);
+  margin: 0 12px;
+  flex-shrink: 0;
+}
+
+.unified-select {
+  border: none;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.88rem;
+  color: #555;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px 8px;
+  min-width: 120px;
+  appearance: auto;
+}
+
+.unified-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.unified-btn {
+  background-color: var(--olive);
+  color: var(--cream);
+  border: none;
+  border-radius: 40px;
+  padding: 10px 24px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+  flex-shrink: 0;
+  margin-left: 8px;
+}
+
+.unified-btn:hover {
+  background-color: var(--gold);
+  color: var(--olive-darker);
+}
+
+@media (max-width: 768px) {
+  .unified-bar {
+    padding: 4px 4px 4px 12px;
+    overflow-x:hidden;
+  }
+
+  .unified-search {
+    min-width: 100px;
+  }
+.unified-search input {
+    font-size: 11px ;
+  }
+  .unified-select {
+    min-width: 90px;
+    font-size: 11px;
+    padding: 4px 2px;
+  }
+
+  .unified-btn {
+    padding: 8px 14px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .bar-divider {
+    height: 20px;
+    margin: 0 4px;
+  }
+}
+
+/* Grade Badges */
+.grade-badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.grade-aplus {
+  background-color: rgba(58, 66, 38, 0.12);
+  color: var(--olive-dark);
+}
+
+.grade-a {
+  background-color: rgba(200, 160, 78, 0.15);
+  color: var(--gold-dark);
+}
+
+.grade-b {
+  background-color: rgba(200, 160, 78, 0.08);
+  color: #8a6d00;
+}
+
+.grade-c {
+  background-color: rgba(180, 180, 180, 0.15);
+  color: #666;
+}
+
+/* Action Button */
+.btn-action {
+  background: none;
+  border: 1px solid var(--gold-light);
+  border-radius: 6px;
+  padding: 5px 10px;
+  color: var(--gold-dark);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-action:hover {
+  background-color: var(--gold);
+  color: var(--olive-darker);
+  border-color: var(--gold);
+}
+
+/* PAGINATION */
+.pagination .page-link {
+    background-color:var(--cream) !important; 
+    color: var(--olive-dark) !important; 
+    border-color:var(--cream) !important;    
+}
+
+.pagination .page-link:hover {
+    background-color: var(--olive-dark)!important; 
+    color:var(--cream) !important;        
+    border-color: var(--olive-dark)!important;
+}
+
+.pagination .page-link:focus {
+    background-color:var(--cream) !important; 
+    color:var(--gold)!important;            
+    border-color:var(--gold)!important;     
+    box-shadow: none !important; 
+}
+
+.pagination .page-item.active .page-link {
+    background-color:var(--gold)!important; 
+    color:var(--cream) !important;            
+    border-color:var(--gold)!important;
+}
+
+.pagination .page-item.disabled .page-link {
+    background-color:var(--cream) !important; 
+    color: #a19f99 !important;      
+    border-color: #e6dfd3 !important;
+}
