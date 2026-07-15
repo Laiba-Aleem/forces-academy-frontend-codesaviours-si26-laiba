@@ -90,70 +90,146 @@
     <div class="container">
       <div class="text-center mb-5" data-aos="fade-up">
         <p class="section-eyebrow">Life at the Academy</p>
-        <h2 class="section-title fw-bold">Moments We Cherish</h2>
-        <p class="section-title" style="font-size: 1.0rem;">Click any photo to view it larger</p>
+        <h2 class="section-title fw-bold">MOMENTS WE CHERISH</h2>
+        <p class="section-title" style="font-size: 1.1rem;">Explore memorable moments from our academy.</p>
         <div class="title-underline" style="margin-left: 47%;"></div>
       </div>
+    </div>
 
-      <div class="container-fluid pt-5">
-        <div align="center">
-          <button class="filter-button fw-semibold" data-filter="all" data-aos="fade-right">All</button>
-          <button class="filter-button fw-semibold" data-filter="category1" data-aos="fade-right"
-            data-aos-delay="100">Study</button>
-          <button class="filter-button fw-semibold" data-filter="category2" data-aos="fade-right"
-            data-aos-delay="150">Training</button>
-          <button class="filter-button fw-semibold" data-filter="category3" data-aos="fade-right"
-            data-aos-delay="200">Classroom</button>
-          <button class="filter-button fw-semibold" data-filter="category4" data-aos="fade-right"
-            data-aos-delay="250">Events</button>
+
+
+    <!-- Filter Buttons -->
+    <div class="text-center mb-5" id="filter-center">
+      <button class="filter-button fw-semibold active" data-filter="all" data-aos="fade-right">All</button>
+      <button class="filter-button fw-semibold" data-filter="study" data-aos="fade-right"
+        data-aos-delay="40">Study</button>
+      <button class="filter-button fw-semibold" data-filter="training" data-aos="fade-right"
+        data-aos-delay="80">Training</button>
+      <button class="filter-button fw-semibold" data-filter="classroom" data-aos="fade-right"
+        data-aos-delay="120">Classroom</button>
+      <button class="filter-button fw-semibold" data-filter="events" data-aos="fade-right"
+        data-aos-delay="160">Events</button>
+    </div>
+
+    <!-- Study Row -->
+    <section id="study" class="gallery-section pt-5" data-aos="fade-in" data-aos-delay="170">
+      <div class="row gallery-row left-scroll gy-4">
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="study">
+          <a href="images/gallery1-study.jpg" class="glightbox" data-gallery="academy-gallery" data-title="Seminar Hall"
+            data-description="Students attending exclusive lectures">
+            <img src="images/gallery1-study.jpg" alt="study" class="img-fluid gallery-img" />
+          </a>
         </div>
-
-        <br />
-
-        <div class="row g-4">
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category1">
-            <a href="images/gallery1-study.jpg" class="glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery1-study.jpg" alt="study" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category1">
-            <a href="images/gallery2-study.jpg" class="glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery2-study.jpg" alt="study" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category2">
-            <a href="images/gallery3-training.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery3-training.jpg" alt="training" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category2">
-            <a href="images/gallery4-training.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery4-training.jpg" alt="training" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category3">
-            <a href="images/gallery5-classroom.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery5-classroom.jpg" alt="classroom" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category3">
-            <a href="images/gallery6-classroom.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery6-classroom.jpg" alt="classroom" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category4">
-            <a href="images/gallery7-student.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery7-student.jpg" alt="student" /></a>
-          </div>
-          <div class="gal-imgs col-lg-3 col-sm-12 col-md-6  filter category4">
-            <a href="images/gallery8-student.jpg" class=" glightbox" data-gallery="academy-gallery"
-              data-title="Study Session" data-description="Students focused during evening study hour"><img
-                src="images/gallery8-student.jpg" alt="student"></a>
-          </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="study">
+          <a href="images/gallery2-study.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Evening Study" data-description="Students preparing for exams">
+            <img src="images/gallery2-study.jpg" alt="study" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="study">
+          <a href="images/gallery9-study.jpg" class="glightbox" data-gallery="academy-gallery" data-title="Auditorium"
+            data-description="Special preparation time">
+            <img src="images/gallery9-study.jpg" alt="study" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="study">
+          <a href="images/gallery10-study.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Library Study" data-description="Collaborative learning sessions">
+            <img src="images/gallery10-study.jpg" alt="study" class="img-fluid gallery-img" />
+          </a>
         </div>
       </div>
-    </div>
+    </section>
+
+    <!-- Training Row -->
+    <section id="training" class="gallery-section">
+      <div class="row gallery-row right-scroll gy-4">
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="training">
+          <a href="images/gallery3-training.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Combat Practice" data-description="Practical field training exercises">
+            <img src="images/gallery3-training.jpg" alt="training" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="training">
+          <a href="images/gallery4-training.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="GTO Training" data-description="Obstacle course training">
+            <img src="images/gallery4-training.jpg" alt="training" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="training">
+          <a href="images/gallery11-training.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Tactical Exercise" data-description="Developing field skills">
+            <img src="images/gallery11-training.jpg" alt="training" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="training">
+          <a href="images/gallery12-training.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Drill Session" data-description="Cadets in drill formation">
+            <img src="images/gallery12-training.jpg" alt="training" class="img-fluid gallery-img" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Classroom Row -->
+    <section id="classroom" class="gallery-section">
+      <div class="row gallery-row left-scroll gy-4">
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="classroom">
+          <a href="images/gallery5-classroom.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Smart Classroom" data-description="Academic lectures conduct here">
+            <img src="images/gallery5-classroom.jpg" alt="classroom" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="classroom">
+          <a href="images/gallery6-classroom.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Lecture Hall" data-description="Interactive learning sessions">
+            <img src="images/gallery6-classroom.jpg" alt="classroom" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="classroom">
+          <a href="images/gallery13-classroom.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Campus View" data-description="A glimpse of academy campus">
+            <img src="images/gallery13-classroom.jpg" alt="classroom" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="classroom">
+          <a href="images/gallery14-classroom.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Seminar Hall" data-description="Workshops are conducted here">
+            <img src="images/gallery14-classroom.jpg" alt="classroom" class="img-fluid gallery-img" />
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Events Row -->
+    <section id="events" class="gallery-section">
+      <div class="row gallery-row right-scroll gy-4">
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="events">
+          <a href="images/gallery7-student.jpg" class="glightbox" data-gallery="academy-gallery" data-title="Annual Day"
+            data-description="Students at annual ceremony">
+            <img src="images/gallery7-student.jpg" alt="events" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="events">
+          <a href="images/gallery8-event.jpg" class="glightbox" data-gallery="academy-gallery"
+            data-title="Passing Out Parade" data-description="Graduation ceremony">
+            <img src="images/gallery8-event.jpg" alt="events" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="events">
+          <a href="images/about2.jpg" class="glightbox" data-gallery="academy-gallery" data-title="Prize Distribution"
+            data-description="Awarding top performers">
+            <img src="images/about2.jpg" alt="events" class="img-fluid gallery-img" />
+          </a>
+        </div>
+        <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="events">
+          <a href="images/gallery15-event.jpg" class="glightbox" data-gallery="academy-gallery" data-title="Ceremony"
+            data-description="Special academy event">
+            <img src="images/gallery15-event.jpg" alt="events" class="img-fluid gallery-img" />
+          </a>
+        </div>
+      </div>
+    </section></div>
   </section>
   <!-- FOOTER -->
   <footer class="site-footer">
