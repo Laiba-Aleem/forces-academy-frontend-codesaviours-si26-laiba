@@ -1,3 +1,6 @@
+// ----------------------------------------------- GALLERY LIGHTBOX ------------------------------------------------
+
+if (typeof GLightbox !== "undefined") {
 const lightbox = GLightbox({
     touchNavigation: true,
     loop: true,
@@ -8,10 +11,14 @@ const lightbox = GLightbox({
     skin: 'clean',
     closeButton: true,
     keyboardNavigation: true,
-});
+});  }
+
+//                                          ----------- GALLERY FILTERS --------------
 
 const buttons = document.querySelectorAll(".filter-button");
 const items = document.querySelectorAll(".gal-imgs");
+
+if (buttons.length) {
 
 buttons.forEach(button => {
   button.addEventListener("click", () => {
@@ -26,10 +33,14 @@ buttons.forEach(button => {
       }
     });
   });
-});
+});    }
+
+//                                           ----------- SCROLL EFFECT ------------
 
 const leftRows = document.querySelectorAll(".left-scroll");
 const rightRows = document.querySelectorAll(".right-scroll");
+
+if (leftRows.length || rightRows.length) {
 
 window.addEventListener("scroll", () => {
     const speed = window.innerWidth < 768 ? 0.01 : 
@@ -50,4 +61,86 @@ window.addEventListener("scroll", () => {
             row.style.transform = `translateX(${offset * speed}px)`;
         }
     });
-});
+});    }
+
+
+// ----------------------------------------------- CONTACT FORM ------------------------------------------------
+const contactForm = document.getElementById('contactForm');
+
+if (contactForm) {
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById('contactName');
+    const email = document.getElementById('contactEmail');
+    const phone = document.getElementById('contactPhone');
+    const subject = document.getElementById('contactSubject');
+    const message = document.getElementById('contactMessage');
+
+    let valid = true;
+
+    // Name check
+    if (name.value.trim() === '') {
+      name.classList.add('is-invalid');
+      valid = false;
+    } else {
+      name.classList.remove('is-invalid');
+      name.classList.add('is-valid');
+    }
+
+    // Email check
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.value.trim())) {
+      email.classList.add('is-invalid');
+      valid = false;
+    } else {
+      email.classList.remove('is-invalid');
+      email.classList.add('is-valid');
+    }
+
+    // Phone check
+    const phoneValue = phone.value.trim();
+const phoneRegex = /^03\d{9}$/;
+if (
+    !phoneRegex.test(phoneValue) ||
+    /^0+$/.test(phoneValue) ||
+    /^(\d)\1+$/.test(phoneValue)
+) {
+    phone.classList.add("is-invalid");
+    phone.classList.remove("is-valid");
+    valid = false;
+} else {
+    phone.classList.remove("is-invalid");
+    phone.classList.add("is-valid");
+}
+
+    // Subject check
+    if (subject.value === '') {
+      subject.classList.add('is-invalid');
+      valid = false;
+    } else {
+      subject.classList.remove('is-invalid');
+      subject.classList.add('is-valid');
+    }
+
+    // Message check (Min 10 characters required)
+const messageValue = message.value.trim();
+
+if (messageValue.length < 10) {
+    message.classList.remove('is-valid');
+    message.classList.add('is-invalid');
+    valid = false;
+} else {
+    message.classList.remove('is-invalid');
+    message.classList.add('is-valid');
+}
+
+    // If all valid
+    if (valid) {
+      document.getElementById('formSuccess').classList.remove('d-none');
+      contactForm.reset();
+      // Remove green borders after reset
+      contactForm.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+    }
+  });
+}
