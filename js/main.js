@@ -1,5 +1,6 @@
-// ----------------------------------------------- GALLERY LIGHTBOX ------------------------------------------------
+// ----------------------------------------------- GALLERY PAGE ------------------------------------------------
 
+// -------- GALLERY LIGHTBOX -----------------
 if (typeof GLightbox !== "undefined") {
     const lightbox = GLightbox({
         touchNavigation: true,
@@ -14,8 +15,7 @@ if (typeof GLightbox !== "undefined") {
     });
 }
 
-//                                          ----------- GALLERY FILTERS --------------
-
+//  ----------- GALLERY FILTERS --------------
 const buttons = document.querySelectorAll(".filter-button");
 const sections = document.querySelectorAll(".gallery-section");
 const wrapper = document.querySelector(".gallery-wrapper");
@@ -40,13 +40,10 @@ buttons.forEach(button => {
             });
             wrapper.classList.remove("loading");
         }, 250);
-
     });
-
 });
 
-//                                           ----------- SCROLL EFFECT ------------
-
+// ----------- SCROLL EFFECT lft right for rows ------------
 const leftRows = document.querySelectorAll(".left-scroll");
 const rightRows = document.querySelectorAll(".right-scroll");
 
@@ -55,7 +52,6 @@ if (leftRows.length || rightRows.length) {
     window.addEventListener("scroll", () => {
         const speed = window.innerWidth < 768 ? 0.01 :
             window.innerWidth < 992 ? 0.05 : 0.08;
-
         leftRows.forEach(row => {
             const rect = row.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -63,7 +59,6 @@ if (leftRows.length || rightRows.length) {
                 row.style.transform = `translateX(${-offset * speed}px)`;
             }
         });
-
         rightRows.forEach(row => {
             const rect = row.getBoundingClientRect();
             if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -74,10 +69,10 @@ if (leftRows.length || rightRows.length) {
     });
 }
 
+// ----------------------------------------------- CONTACT PAGE ------------------------------------------------
 
-// ----------------------------------------------- CONTACT FORM ------------------------------------------------
+// ------------- CONTACT FORM --------------
 const contactForm = document.getElementById('contactForm');
-
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
         e.preventDefault();
@@ -90,7 +85,7 @@ if (contactForm) {
 
         let valid = true;
 
-        // Name check
+    // Name check
         if (name.value.trim() === '') {
             name.classList.add('is-invalid');
             valid = false;
@@ -98,8 +93,7 @@ if (contactForm) {
             name.classList.remove('is-invalid');
             name.classList.add('is-valid');
         }
-
-        // Email check
+    // Email check
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value.trim())) {
             email.classList.add('is-invalid');
@@ -108,8 +102,7 @@ if (contactForm) {
             email.classList.remove('is-invalid');
             email.classList.add('is-valid');
         }
-
-        // Phone check
+    // Phone check
         const phoneValue = phone.value.trim();
         const phoneRegex = /^03\d{9}$/;
         if (
@@ -124,8 +117,7 @@ if (contactForm) {
             phone.classList.remove("is-invalid");
             phone.classList.add("is-valid");
         }
-
-        // Subject check
+    // Subject check
         if (subject.value === '') {
             subject.classList.add('is-invalid');
             valid = false;
@@ -133,8 +125,7 @@ if (contactForm) {
             subject.classList.remove('is-invalid');
             subject.classList.add('is-valid');
         }
-
-        // Message check (Min 10 characters required)
+    // Message check (Min 10 characters required)
         const messageValue = message.value.trim();
 
         if (messageValue.length < 10) {
@@ -145,13 +136,135 @@ if (contactForm) {
             message.classList.remove('is-invalid');
             message.classList.add('is-valid');
         }
-
-        // If all valid
+    // If all valid
         if (valid) {
             document.getElementById('formSuccess').classList.remove('d-none');
             contactForm.reset();
-            // Remove green borders after reset
+    // Remove green borders after reset
             contactForm.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
         }
     });
+}
+
+// ------------------------------------------------- NAVBAR  ------------------------------------------------------
+
+/* TRANSPARENT NAVBAR ON VIDEO ,revealed on SCROLL */
+const navbar = document.getElementById('mainNav');
+const landingHero = document.querySelector('.landing-hero');
+function updateNavbar() {
+  const heroBottom = landingHero.getBoundingClientRect().bottom;
+  if (heroBottom <= 80) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+}
+window.addEventListener('scroll', updateNavbar);
+window.addEventListener('load', updateNavbar);
+updateNavbar();
+
+// -------------------------------------------------- HOME PAGE ---------------------------------------------------
+
+/* ------------------------  CountUp.js stat counters ----------------------- */
+  /* Only run when the stats section scrolls into view. */
+  var counters = document.querySelectorAll(".stat-number[data-count]");
+  if (counters.length > 0 && window.countUp) {
+    var started = false;
+    var runCounters = function () {
+      counters.forEach(function (el) {
+        var end = parseFloat(el.getAttribute("data-count"));
+        var counter = new countUp.CountUp(el, end, { duration: 2.2 });
+        if (!counter.error) {
+  counter.start(function () {
+    if (end === 12) {
+      el.textContent += "+";
+    }
+    if (end === 95) {
+        el.textContent += "%";
+    }
+  });
+}
+      });
+    };
+    /* Use IntersectionObserver so counting starts when visible */
+    var statsSection = document.querySelector(".stats-section");
+    if (statsSection && "IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting && !started) {
+            started = true;
+            runCounters();
+            observer.disconnect();
+          }
+        });
+      }, { threshold: 0.4 });
+      observer.observe(statsSection);
+    } else {
+      runCounters(); // fallback: just run
+    }
+  }
+
+/*------------------- ANNOUNCEMENT SECTION IMAGES --------------------*/
+const announceCarouselEl = document.getElementById("announceCarousel");
+const tints = document.querySelectorAll(".announce-bg-img");
+
+if (announceCarouselEl && tints.length) {
+  announceCarouselEl.addEventListener("slide.bs.carousel", (e) => {
+    tints.forEach(t => t.classList.remove("active"));
+    tints[e.to].classList.add("active");
+  });
+}
+
+/*-------------------- CTA SECTION VISUAL ----------------------------*/
+// CTA soldier(march left to right on scroll))
+const ctaSection = document.querySelector(".cta-section");
+const ctaSoldier = document.getElementById("ctaSoldier");
+if (ctaSection && ctaSoldier) {
+  window.addEventListener("scroll", () => {
+    const rect = ctaSection.getBoundingClientRect();
+    const winH = window.innerHeight;
+    const total = rect.height + winH;
+    const scrolled = winH - rect.top;
+    const progress = Math.min(Math.max(scrolled / total, 0), 1);
+
+    if (window.innerWidth < 768) {
+      const percent = 12 + progress * 70;   // 12% to 82% soldier march on path
+      ctaSoldier.style.top = `${percent}%`;
+      ctaSoldier.style.left = `50%`;
+    } else {
+      const percent = 10 + progress * 80;   // 10% to 90% soldier march on path
+      ctaSoldier.style.left = `${percent}%`;
+      ctaSoldier.style.top = `50%`;
+    }
+  });
+}
+
+/* ------------------- Back to Top BUTTON ---------------------- */
+window.addEventListener("scroll", function () {
+  var backBtn = document.getElementById("backToTop");
+  if (backBtn) {
+    backBtn.style.display = window.scrollY > 400 ? "flex" : "none";
+  }
+});
+var backBtn = document.getElementById("backToTop");
+if (backBtn) {
+  backBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
+/*------------------- WHY CHOOSE US SECTION -----------------------*/
+// WHY CHOOSE US — card expand/collapse
+const whyCards = document.querySelectorAll(".why-card");
+whyCards.forEach(card => {
+  card.addEventListener("click", () => {
+    whyCards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+  });
+});
+
+/*------------------- Current year on FOOTER -----------------------*/
+var yearSpan = document.getElementById('currentYear');
+if (yearSpan) {
+  yearSpan.textContent = new Date().getFullYear();
 }
