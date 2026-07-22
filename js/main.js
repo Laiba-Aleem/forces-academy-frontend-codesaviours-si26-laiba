@@ -263,6 +263,20 @@ whyCards.forEach(card => {
   });
 });
 
+/*------------------- for lazy loading images ---------------------*/
+const lazyBgElements = document.querySelectorAll('[data-bg]');
+if (lazyBgElements.length > 0) {
+    const bgObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const el = entry.target;
+                el.style.backgroundImage = `url('${el.dataset.bg}')`;
+                observer.unobserve(el);
+            }
+        });
+    }, { rootMargin: "200px" });
+    lazyBgElements.forEach(el => bgObserver.observe(el));
+}
 /*------------------- Current year on FOOTER -----------------------*/
 var yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
