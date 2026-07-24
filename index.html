@@ -1,48 +1,55 @@
-
-    <!-- Bootstrap 5.3 JS bundle --
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS 
-     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-     <script> AOS.init({easing: 'ease-in-out',
-    duration: 400});</script>
-    <!-- Vanilla Tilt JS --
-     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
-     <!-- GSAP + ScrollTrigger --
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-<!-- CountUp.js --
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>-->
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Forces Academy</title>
-    <!-- Google Fonts: Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <!-- Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-    <!-- AOS (Animate On Scroll) CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
-    <!-- animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- My Stylesheet -->
-    <link rel="stylesheet" href="css/style.css"/>
-<base target="_blank">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Forces Academy</title>
+  <!-- Google Fonts: Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,600;1,600&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,600,0..100,0..1&display=swap"
+    rel="stylesheet">
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <!-- animate.css -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <!-- My Stylesheet -->
+  <link rel="stylesheet" href="css/style.css" />
+  <base target="_blank">
 </head>
-<body class="has-intro" style="background-color: var(--olive-dark);">
-  
+
+<body class="home-page">
   <!-- FULL SCREEN HEADING -->
   <div class="hero-heading" id="heroHeading">
-    <h1>Training<br>Pakistan's Future</h1>
+    <svg class="curve-tagline" viewBox="0 0 400 90">
+      <path id="curvePath" d="M 20,75 Q 200,15 380,75" fill="transparent"></path>
+      <text>
+        <textPath href="#curvePath" startOffset="50%" text-anchor="middle">
+          DISCIPLINE &bull; KNOWLEDGE &bull; HONOUR
+        </textPath>
+      </text>
+    </svg>
+    <h1 class="brand-word">FORCES</h1>
+    <div class="tagline-box">
+      <span>Faisalabad's Premier Cadet Training Academy</span>
+    </div>
   </div>
-<!--NAVBAR SECTION-->
+
+  <!--NAVBAR SECTION-->
   <nav class="navbar navbar-expand-lg sticky-top nav-transparent" id="mainNav">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -59,582 +66,665 @@
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" href="index.html" target="_self">Home</a></li>
+            <a class="nav-link active" href="index.html" target="_self">Home</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html" target="_self">About</a></li>
+            <a class="nav-link" href="about.html" target="_self">About</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="courses.html" target="_self">Courses</a></li>
+            <a class="nav-link" href="courses.html" target="_self">Courses</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="admissions.html" target="_self">Admissions</a></li>
+            <a class="nav-link" href="admissions.html" target="_self">Admissions</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="results.html" target="_self">Results</a></li>
+            <a class="nav-link" href="results.html" target="_self">Results</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="gallery.html" target="_self">Gallery</a></li>
+            <a class="nav-link" href="gallery.html" target="_self">Gallery</a>
+          </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html" target="_self">Contact</a></li>
+            <a class="nav-link" href="contact.html" target="_self">Contact</a>
+          </li>
           <li class="nav-item">
             <a class="btn btn-gold" href="#"">Student Portal</a></li>
         </ul>
-      </div></div></nav>
+</div></div></nav>
 <!-- PHASE 1 & 2: SINGLE VIDEO which SHRINKS TO CARD-->
-<section class="landing-hero" id="Hero">
-  <!-- Background layers -->
-  <div class="gold-glow"></div>
-  <div class="grain-overlay"></div>
-  <div class="vignette"></div>
+<section class=" landing-hero" id="Hero">
+              <!-- Background layers -->
+              <div class="gold-glow"></div>
+              <div class="grain-overlay"></div>
+              <div class="vignette"></div>
 
-  <div class="floating-cards-container" id="cardsContainer">
-    <!-- Floating Card 1 - Top Left -->
-    <div class="float-card float-card-1" id="card1">
-      <img src="images/about-banner.webp" alt="Students">
-    </div>
-    <!-- Floating Card 2 - Top Right -->
-    <div class="float-card float-card-2" id="card2">
-      <img src="images/gallery13-classroom.jpg" alt="Campus">
-    </div>
-    <!-- Floating Card 3 - Bottom Left -->
-    <div class="float-card float-card-3" id="card3">
-      <img src="images/hero.webp" alt="Sports">
-    </div>
-    <!-- Floating Card 4 - Bottom Right -->
-    <div class="float-card float-card-4" id="card4">
-      <img src="images/gallery-banner.webp" alt="Library">
-    </div>
-    <!-- HERO VIDEO CARD - Starts full screen, shrinks to card -->
-    <div class="float-card float-card-hero" id="heroCard">
-      <video id="heroVideo" autoplay muted loop playsinline>
-        <source src="images/hero-video.mp4" type="video/mp4">
-      </video>
-      <!-- Overlay -->
-      <div class="video-overlay"></div>
-      <!-- Sound Button -->
-      <button class="sound-btn" id="soundBtn">
-        <i class="bi bi-volume-mute-fill"></i>
-      </button>
-    </div>
-  </div>
-  <!-- Scroll Indicator -->
-  <div class="scroll-indicator">
-    <span>SCROLL</span>
-    <i class="bi bi-chevron-down"></i>
-  </div>
-</section>
-
-<!-- CONTENT SECTION -->
-<section class="content-section" id="contentSection">
-  <div class="hero-overlay">         
-    <div class="container">
-      <div class="d-flex flex-column hero-content mb-4" data-aos="fade-up">
-          <p class="headingpoints mb-1">Discipline • Knowledge • Honour</p>
-          <h1 class="fw-bold mb-0 lh-1">Forces Academy<br>Faisalabad</h1>
-          <hr class="hero-divider">
-          <p class="lead mb-1">Excellence in Education — Preparing Tomorrow's Leaders Today.</p>
-        </div>
-        <div class="d-flex flex-row mb-3 gap-1" data-aos="fade-up" data-aos-delay="100">
-          <a class="btn btn-gold m-1" href="admissions.html" target="_self">
-            <i class="fa-solid fa-pen-to-square me-2"></i>Apply Now
-          </a>
-          <a class="btn m-1 cta2" href="about.html" target="_self">Learn More</a>
-        </div>
-      </div>
-    </div>
-</section>
-
-    <!------------------------------------------- WHY CHOOSE US SECTION ------------------------------->
-<section class="why-section">
-  <div class="bubble bubble-0"></div>
-<div class="bubble bubble-1"></div>
-<div class="bubble bubble-2"></div>
-<div class="bubble bubble-3"></div>
-<div class="bubble bubble-4"></div>
-<div class="bubble bubble-5"></div>
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <span class="section-tag">Why Forces Academy?</span>
-      <h2 class=" mt-2" style="color: var(--olive-dark); font-weight:900; font-size: 40px;">The Preferred Choice For Cadets</h2>
-    </div>
-    <div class="why-cards">
-      <div class="why-card active">
-        <div class="why-card-bg" data-bg="images/why1.webp"></div>
-        <div class="why-card-overlay"></div>
-        <span class="why-card-label">Experienced Faculty</span>
-        <div class="why-card-content">
-          <h3>Experienced Faculty &amp; Mentors</h3>
-          <p>Retired forces officers and subject experts guide every cadet through ISSB, PMA, and academic preparation with personal mentorship.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-card-bg" data-bg="images/why2.webp"></div>
-        <div class="why-card-overlay"></div>
-        <span class="why-card-label">Modern Facilities</span>
-        <div class="why-card-content">
-          <h3>Modern Training Facilities</h3>
-          <p>Well-equipped classrooms, physical training grounds, and simulated test environments prepare students for every stage of selection.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-card-bg" data-bg="images/why3.webp"></div>
-        <div class="why-card-overlay"></div>
-        <span class="why-card-label">Proven Success Rate</span>
-        <div class="why-card-content">
-          <h3>Proven Success Rate</h3>
-          <p>With a 95% success rate and 18 years of excellence, our structured approach has helped thousands of cadets secure their place.</p>
-        </div>
-      </div>
-      <div class="why-card">
-        <div class="why-card-bg" data-bg="images/why4.webp"></div>
-        <div class="why-card-overlay"></div>
-        <span class="why-card-label">Wide Course Range</span>
-        <div class="why-card-content">
-          <h3>Comprehensive Course Range</h3>
-          <p>From PMA Long Course to AFNS, Lady Cadet Course, and Medical Cadet Course — complete preparation under one roof.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
- <!-------------------------------------- Stats Counter section ----------------------------------------------->
-  <section class="section-padding section2-padding stats-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-6 col-md-3" data-aos="zoom-in">
-          <div class="stat-box">
-            <div class="stat-divider">
-              <span class="line"></span>
-            <i class="bi bi-people-fill stat-icon"></i>
-            <span class="line"></span></div>
-            <div class="stat-number" data-count="2500">0</div>
-            <div class="stat-label">Students Enrolled</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
-          <div class="stat-box">
-            <div class="stat-divider">
-              <span class="line"></span>
-            <i class="bi bi-award-fill stat-icon"></i>
-            <span class="line"></span></div>
-            <div class="stat-number" data-count="18">0</div>
-            <div class="stat-label">Years of Excellence</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
-          <div class="stat-box">
-            <div class="stat-divider">
-              <span class="line"></span>
-            <i class="bi bi-book-half stat-icon"></i>
-            <span class="line"></span></div>
-            <div class="stat-number" data-count="12">0</div>
-            <div class="stat-label">Courses Offered</div>
-          </div>
-        </div>
-        <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
-          <div class="stat-box">
-            <div class="stat-divider">
-              <span class="line"></span>
-            <i class="bi bi-graph-up-arrow stat-icon"></i>
-            <span class="line"></span></div>
-            <div class="stat-number" data-count="95">0</div>
-            <div class="stat-label">Success Rate</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!---------------------------- Announcements Section ----------------------------->
-<section class="announce-section">
-  <div class="announce-bg-img tint-1 active" data-bg="images/announce-1.webp"></div>
-  <div class="announce-bg-img tint-2" data-bg="images/announce-2.webp"></div>
-  <div class="announce-bg-img tint-3" data-bg="images/announce-3.webp"></div>
-  <div class="announce-bg-img tint-4" data-bg="images/announce-4.webp"></div>
-  <div class="announce-overlay"></div>
-
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <span class="section-tag section-tag-light">Announcements</span>
-      <h2 class="fw-bold mt-2 announce-heading">Latest Updates</h2>
-    </div>
-    <div id="announceCarousel" class="carousel slide announce-wrap" data-bs-ride="carousel" data-bs-interval="4500">
-      <div class="carousel-inner">
-
-        <div class="carousel-item active">
-          <div class="announce-slide">
-            <h3>Admissions Open — Batch 2026</h3>
-            <p>Limited seats available for ISSB &amp; PMA Long Course preparation. Structured training begins 1st September 2026.</p>
-            <a href="admissions.html#PMA-long-course" target="_self" class="btn btn-gold">Apply Now</a>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="announce-slide">
-            <h3>New Batch for Lady Cadet Course</h3>
-            <p>A dedicated preparation track for aspiring lady cadets, guided by experienced mentors, starts next month.</p>
-            <a href="courses.html#llc-course" target="_self" class="btn btn-gold">Learn More</a>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="announce-slide">
-            <h3>ISSB Mock Interview Workshop</h3>
-            <p>A full-day intensive workshop covering psychological tests, group tasks, and interview technique.</p>
-            <a href="courses.html" target="_self" class="btn btn-gold">View Details</a>
-          </div>
-        </div>
-
-        <div class="carousel-item">
-          <div class="announce-slide">
-            <h3>Results Announced — Spring Batch</h3>
-            <p>Congratulations to all our cadets on their outstanding results. Check the results page for details.</p>
-            <a href="results.html#result-table" target="_self" class="btn btn-gold">See Results</a>
-          </div>
-        </div>
-      </div>
-      <button class="carousel-control-prev announce-arrow announce-arrow-prev" type="button" data-bs-target="#announceCarousel" data-bs-slide="prev">
-        <i class="bi bi-arrow-left"></i>
-      </button>
-      <button class="carousel-control-next announce-arrow announce-arrow-next" type="button" data-bs-target="#announceCarousel" data-bs-slide="next">
-        <i class="bi bi-arrow-right"></i>
-      </button>
-      <div class="carousel-indicators announce-indicators">
-        <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="2"></button>
-        <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="3"></button>
-      </div>
-    </div>
-  </div>
-</section>
-
-  <!---------------------------------------- Testimonials Slider ------------------------------------------->
-<section class="testimonials-section">
-  <div class="container">
-    <div class="text-center mb-5" data-aos="fade-up">
-      <span class="section-tag">Testimonials</span>
-      <h2 class=" mt-2" style="color: var(--olive-dark); font-weight:900; font-size: 40px;">Voices of Proud Cadets &amp; Alumni</h2>
-    </div>
-    <div id="testimonialCarousel" class="carousel slide testimonial-wrap" data-bs-ride="carousel" data-bs-interval="4000">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <div class="testimonial-card">
-            <div class="testimonial-photo-col">
-              <img src="images/cadet1.webp" loading="lazy" alt="Zainab Rehman" class="testimonial-photo-img">
-            </div>
-            <div class="testimonial-text-col">
-              <i class="bi bi-quote testimonial-quote-icon"></i>
-              <div class="testimonial-stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+              <!-- Content overlay (hidden on start ) -->
+              <div class="hero-content-overlay" id="heroContentOverlay">
+                <div class="container">
+                  <p class="headingpoints mb-1">Discipline • Knowledge • Honour</p>
+                  <h1 class="fw-bold mb-0 lh-1">Forces Academy<br>Faisalabad</h1>
+                  <hr class="hero-divider">
+                  <p class="lead mb-1">Excellence in Education — Preparing Tomorrow's Leaders Today.</p>
+                  <div class="d-flex flex-row mb-3 gap-1">
+                    <a class="btn btn-gold m-1" href="admissions.html">Apply Now</a>
+                    <a class="btn m-1 cta2" href="about.html">Learn More</a>
+                  </div>
+                </div>
               </div>
-              <p class="testimonial-text">Forces Academy gave me the discipline and confidence I needed for my ISSB. The mentors treated every cadet like family, pushing us to be our best every day.</p>
-              <h5 class="testimonial-name">Zainab Rehman</h5>
-              <span class="testimonial-meta">Medical Cadet Course — Batch 2023</span>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <div class="testimonial-photo-col">
-              <img src="images/cadet2.webp" loading="lazy"  alt="Ayesha Malik" class="testimonial-photo-img">
-            </div>
-            <div class="testimonial-text-col">
-              <i class="bi bi-quote testimonial-quote-icon"></i>
-              <div class="testimonial-stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+
+              <div class="floating-cards-container" id="cardsContainer">
+                <!-- Floating Card 1 - Top Left -->
+                <div class="float-card float-card-1" id="card1">
+                  <img src="images/about-banner.webp" alt="campus">
+                </div>
+                <!-- Floating Card 2 - Top Right -->
+                <div class="float-card float-card-2" id="card2">
+                  <img src="images/gallery13-classroom.jpg" alt="Campus">
+                </div>
+                <!-- Floating Card 3 - Bottom Left -->
+                <div class="float-card float-card-3" id="card3">
+                  <img src="images/hero.webp" alt="campus">
+                  <div class="card3-gradient-overlay"></div>
+                </div>
+                <!-- Floating Card 4 - Bottom Right -->
+                <div class="float-card float-card-4" id="card4">
+                  <img src="images/gallery-banner.webp" alt="campus">
+                </div>
+                <!-- HERO VIDEO CARD - Starts full screen, shrinks to card -->
+                <div class="float-card float-card-hero" id="heroCard">
+                  <video id="heroVideo" autoplay muted loop playsinline preload="auto">
+                    <source
+                      src="https://res.cloudinary.com/rfdwcabn/video/upload/q_auto,f_auto/v1784910332/hero-video_lgp5sv.mp4"
+                      type="video/mp4">
+                  </video>
+                  <!-- Overlay -->
+                  <div class="video-overlay"></div>
+                  <!-- Sound Button -->
+                  <button class="sound-btn" id="soundBtn">
+                    <i class="bi bi-volume-mute-fill"></i>
+                  </button>
+                </div>
               </div>
-              <p class="testimonial-text">The structured preparation here made all the difference. From physical training to interview practice, every session was purposeful and well-planned.</p>
-              <h5 class="testimonial-name">Ayesha Malik</h5>
-              <span class="testimonial-meta">Lady Cadet Course — Batch 2023</span>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <div class="testimonial-photo-col">
-              <img src="images/cadet3.webp" loading="lazy"  alt="Hamza Tariq" class="testimonial-photo-img">
-            </div>
-            <div class="testimonial-text-col">
-              <i class="bi bi-quote testimonial-quote-icon"></i>
-              <div class="testimonial-stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i>
+              <!-- Scroll Indicator -->
+              <div class="scroll-indicator">
+                <span>SCROLL</span>
+                <i class="bi bi-chevron-down"></i>
               </div>
-              <p class="testimonial-text">I joined with zero knowledge about the selection process. The faculty guided me step by step until I felt fully prepared and confident.</p>
-              <h5 class="testimonial-name">Hamza Tariq</h5>
-              <span class="testimonial-meta">AFNS Course — Batch 2024</span>
-            </div>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <div class="testimonial-card">
-            <div class="testimonial-photo-col">
-              <img src="images/cadet4.webp" loading="lazy"  alt="Ali Hassan" class="testimonial-photo-img">
-            </div>
-            <div class="testimonial-text-col">
-              <i class="bi bi-quote testimonial-quote-icon"></i>
-              <div class="testimonial-stars">
-                <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-              </div>
-              <p class="testimonial-text">Forces Academy Faisalabad isn't just a coaching center, it's a second home. The discipline I learned here still shapes how I carry myself today.</p>
-              <h5 class="testimonial-name">Ali Hassan</h5>
-              <span class="testimonial-meta">PMA Long Course — Batch 2024</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="testimonial-controls">
-        <div class="carousel-indicators testimonial-indicators">
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
-        </div>
-        <div class="testimonial-arrows">
-          <button class="testimonial-arrow-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
-          <button class="testimonial-arrow-btn" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!----------------------------------------- CTA SECTION ----------------------------------------------------->
-<section class="cta-section">
-  <div class="container cta-flex" data-aos="zoom-in">
-    <div class="cta-text">
-      <h2 class="mb-3">Ready to Begin Your Journey?</h2>
-      <p class="mb-4">Admissions are now open. Join a legacy of discipline, honor, and excellence.</p>
-      <a href="admissions.html" target="_self" class="btn btn-gold cta1 me-2">Apply for Admission</a>
-      <a href="contact.html" target="_self" class="btn cta2">Contact Us</a>
-    </div>
-    <div class="cta-visual" id="ctaVisual">
-      <div class="cta-ring ring-1"></div>
-      <div class="cta-ring ring-2"></div>
-      <div class="cta-ring ring-3"></div>
-      <div class="cta-ring ring-4"></div>
-      <div class="cta-path"></div>
-      <i class="bi bi-person-walking cta-soldier" id="ctaSoldier"></i>
-    </div>
-  </div>
-</section>
+              </section>
 
-<!-------------------------------------------------------- FOOTER ----------------------------------------------->
-<footer class="site-footer">
-    <div class="container">
-        <div class="row gy-4">
-        <!-- Description and Logo -->
-            <div class="col-lg-4 col-md-6 footer-logo">
-            <div class="d-flex align-items-center gap-2 mb-3">
-            <img src="images/logo.jpg" alt="logo" height="30">
-            <h5 class="pt-3">Forces Academy</h5>
-            </div>
-            <p>Empowering students through quality education, discipline, and expert guidance. Building confidence and shaping future leaders for success.</p>
-            <div class="social-icons mt-3">
-            <a href="https://www.facebook.com/forcesacademyfaisalabad" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-            <a href="https://www.tiktok.com/@forcesacademyfaisalabad3" target="_blank" aria-label="Tiktok"><i class="bi bi-tiktok"></i></a>
-            <a href="https://www.instagram.com/forcesacademyfaisalabad" target="_blank"  aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-            <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
-          </div></div>
-        <!-- QUICK LINKS -->
-            <div class="col-lg-2 col-md-6 ">
-            <h5 class="fw-bold header-title">Quick Links</h5>
-            <ul class="footer-links">
-               <li><a href="index.html" target="_self">Home</a></li>
-               <li><a href="about.html" target="_self">About</a></li>
-               <li><a href="courses.html" target="_self">Courses</a></li>
-               <li><a href="admissions.html" target="_self">Admissions</a></li>
-               <li><a href="results.html" target="_self">Results</a></li>
-               <li><a href="contact.html" target="_self">Contact</a></li>
-            </ul>
-            </div>
-        <!-- Courses -->
-            <div class="col-lg-3 col-md-6">
-            <h5>Courses</h5>
-            <ul class="footer-links">
-               <li><a href="courses.html#pma-course" target="_self">PMA Long Course</a></li>
-               <li><a href="courses.html#afns-course" target="_self">AFNS Course</a></li>
-               <li><a href="courses.html#llc-course" target="_self">Lady Cadet Course</a></li>
-               <li><a href="courses.html#paf-course" target="_self">PAF & Navy Test Prep</a></li>
-               <li><a href="courses.html#issb-course" target="_self">ISSB & GTO Course</a></li>
-               <li><a href="courses.html#medical-cllg-course" target="_self">Medical Cadet Course</a></li>
-            </ul>
-            </div>
-        <!-- CONTACT -->
-            <div class="col-lg-3 col-md-6 contact-footer">
-            <h5 class="fw-bold mb-3 mt-2 header-title">Contact Us</h5>
-            <ul class="footer-links">
-               <li><i class="bi bi-geo-alt me-2"></i><a href="contact.html#map">Building 3, near University of Faisalabad, Canal Road, Faisalabad</a></li>
-               <li><i class="bi bi-telephone me-2"></i><a href="tel:03478592099">0347 8592099</a></li>
-               <li><i class="bi bi-envelope me-2"></i><a href="mailto:info@forcesacademyfsd.edu.pk">info@forcesacademyfsd.edu.pk</a></li>
-            </ul>
-            </div>
-        </div>
-        <!-- Copyright -->
-        <div class="footer-bottom">
-        <p class="mb-0">&copy; <span id="currentYear">2026</span> Forces Academy Faisalabad. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
-<!---------------------------------------------- Back to top button ------------------------------------------->
-<button id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
-<!--------------------------------------------------- SCRIPTS ------------------------------------------------->
- <!--Bootstrap 5.3 JS bundle -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS -->
-     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-     <script>AOS.init({ easing: 'ease-in-out', duration: 600, once: true });</script>
-    <!-- Vanilla Tilt JS -->
-     <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
-     <!-- CountUp.js -->
-  <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
-     <!-- GSAP & ScrollTrigger -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+              <!------------------------------------------- WHY CHOOSE US SECTION ------------------------------->
+              <section class="why-section">
+                <div class="bubble bubble-0"></div>
+                <div class="bubble bubble-1"></div>
+                <div class="bubble bubble-2"></div>
+                <div class="bubble bubble-3"></div>
+                <div class="bubble bubble-4"></div>
+                <div class="bubble bubble-5"></div>
+                <div class="container">
+                  <div class="text-center mb-5">
+                    <span class="section-tag">Why Forces Academy?</span>
+                    <h2 class=" mt-2" style="color: var(--olive-dark); font-weight:900; font-size: 40px;">The Preferred
+                      Choice For Cadets</h2>
+                  </div>
+                  <div class="why-cards">
+                    <div class="why-card active">
+                      <div class="why-card-bg" data-bg="images/why1.webp"></div>
+                      <div class="why-card-overlay"></div>
+                      <span class="why-card-label">Experienced Faculty</span>
+                      <div class="why-card-content">
+                        <h3>Experienced Faculty &amp; Mentors</h3>
+                        <p>Retired forces officers and subject experts guide every cadet through ISSB, PMA, and academic
+                          preparation with personal mentorship.</p>
+                      </div>
+                    </div>
+                    <div class="why-card">
+                      <div class="why-card-bg" data-bg="images/why2.webp"></div>
+                      <div class="why-card-overlay"></div>
+                      <span class="why-card-label">Modern Facilities</span>
+                      <div class="why-card-content">
+                        <h3>Modern Training Facilities</h3>
+                        <p>Well-equipped classrooms, physical training grounds, and simulated test environments prepare
+                          students for every stage of selection.</p>
+                      </div>
+                    </div>
+                    <div class="why-card">
+                      <div class="why-card-bg" data-bg="images/why3.webp"></div>
+                      <div class="why-card-overlay"></div>
+                      <span class="why-card-label">Proven Success Rate</span>
+                      <div class="why-card-content">
+                        <h3>Proven Success Rate</h3>
+                        <p>With a 95% success rate and 18 years of excellence, our structured approach has helped
+                          thousands of cadets secure their place.</p>
+                      </div>
+                    </div>
+                    <div class="why-card">
+                      <div class="why-card-bg" data-bg="images/why4.webp"></div>
+                      <div class="why-card-overlay"></div>
+                      <span class="why-card-label">Wide Course Range</span>
+                      <div class="why-card-content">
+                        <h3>Comprehensive Course Range</h3>
+                        <p>From PMA Long Course to AFNS, Lady Cadet Course, and Medical Cadet Course — complete
+                          preparation under one roof.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-<script>
-// GSAP & ScrollTrigger Setup
-gsap.registerPlugin(ScrollTrigger);
+              <!-------------------------------------- Stats Counter section ----------------------------------------------->
+              <section class="section-padding section2-padding stats-section">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-6 col-md-3" data-aos="zoom-in">
+                      <div class="stat-box">
+                        <div class="stat-divider">
+                          <span class="line"></span>
+                          <i class="bi bi-people-fill stat-icon"></i>
+                          <span class="line"></span>
+                        </div>
+                        <div class="stat-number" data-count="2500">0</div>
+                        <div class="stat-label">Students Enrolled</div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="100">
+                      <div class="stat-box">
+                        <div class="stat-divider">
+                          <span class="line"></span>
+                          <i class="bi bi-award-fill stat-icon"></i>
+                          <span class="line"></span>
+                        </div>
+                        <div class="stat-number" data-count="18">0</div>
+                        <div class="stat-label">Years of Excellence</div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="stat-box">
+                        <div class="stat-divider">
+                          <span class="line"></span>
+                          <i class="bi bi-book-half stat-icon"></i>
+                          <span class="line"></span>
+                        </div>
+                        <div class="stat-number" data-count="12">0</div>
+                        <div class="stat-label">Courses Offered</div>
+                      </div>
+                    </div>
+                    <div class="col-6 col-md-3" data-aos="zoom-in" data-aos-delay="300">
+                      <div class="stat-box">
+                        <div class="stat-divider">
+                          <span class="line"></span>
+                          <i class="bi bi-graph-up-arrow stat-icon"></i>
+                          <span class="line"></span>
+                        </div>
+                        <div class="stat-number" data-count="95">0</div>
+                        <div class="stat-label">Success Rate</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-// ELEMENTS
-const heroCard = document.getElementById('heroCard');
-const heroHeading = document.getElementById('heroHeading');
-const heroVideo = document.getElementById('heroVideo');
-const soundBtn = document.getElementById('soundBtn');
+              <!---------------------------- Announcements Section ----------------------------->
+              <section class="announce-section">
+                <div class="announce-bg-img tint-1 active" data-bg="images/announce-1.webp"></div>
+                <div class="announce-bg-img tint-2" data-bg="images/announce-2.webp"></div>
+                <div class="announce-bg-img tint-3" data-bg="images/announce-3.webp"></div>
+                <div class="announce-bg-img tint-4" data-bg="images/announce-4.webp"></div>
+                <div class="announce-overlay"></div>
 
-// Floating cards
-const floatCards = [
-  document.getElementById('card1'),
-  document.getElementById('card2'),
-  document.getElementById('card3'),
-  document.getElementById('card4')
-];
+                <div class="container">
+                  <div class="text-center mb-5">
+                    <span class="section-tag section-tag-light">Announcements</span>
+                    <h2 class="fw-bold mt-2 announce-heading">Latest Updates</h2>
+                  </div>
+                  <div id="announceCarousel" class="carousel slide announce-wrap" data-bs-ride="carousel"
+                    data-bs-interval="4000" data-bs-pause="false">
+                    <div class="carousel-inner">
 
-// STATE
-let isMuted = true;
+                      <div class="carousel-item active">
+                        <div class="announce-slide">
+                          <h3>Admissions Open — Batch 2026</h3>
+                          <p>Limited seats available for ISSB &amp; PMA Long Course preparation. Structured training
+                            begins 1st September 2026.</p>
+                          <a href="admissions.html#PMA-long-course" target="_self" class="btn btn-gold">Apply Now</a>
+                        </div>
+                      </div>
 
-// PAGE LOAD: Show heading
-window.addEventListener('load', () => {
-  setTimeout(() => {
-    if (heroHeading) heroHeading.classList.add('visible');
-  }, 500);
-});
+                      <div class="carousel-item">
+                        <div class="announce-slide">
+                          <h3>New Batch for Lady Cadet Course</h3>
+                          <p>A dedicated preparation track for aspiring lady cadets, guided by experienced mentors,
+                            starts next month.</p>
+                          <a href="courses.html#llc-course" target="_self" class="btn btn-gold">Learn More</a>
+                        </div>
+                      </div>
 
-// SOUND BUTTON
-if (soundBtn) {
-  soundBtn.addEventListener('click', () => {
-    isMuted = !isMuted;
-    if (heroVideo) heroVideo.muted = isMuted;
-    soundBtn.innerHTML = isMuted ? 
-      '<i class="bi bi-volume-mute-fill"></i>' : 
-      '<i class="bi bi-volume-up-fill"></i>';
-  });
-}
+                      <div class="carousel-item">
+                        <div class="announce-slide">
+                          <h3>ISSB Mock Interview Workshop</h3>
+                          <p>A full-day intensive workshop covering psychological tests, group tasks, and interview
+                            technique.</p>
+                          <a href="courses.html" target="_self" class="btn btn-gold">View Details</a>
+                        </div>
+                      </div>
 
-// SINGLE MASTER TIMELINE: All phases in one
-const masterTl = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.landing-hero',
-    start: 'top top',
-    end: '+=200%',        // Total scroll: 120% (phase 1) + 80% (phase 2)
-    scrub: 1.5,
-    pin: true,            // Pin throughout both phases
-  }
-});
+                      <div class="carousel-item">
+                        <div class="announce-slide">
+                          <h3>Results Announced — Spring Batch</h3>
+                          <p>Congratulations to all our cadets on their outstanding results. Check the results page for
+                            details.</p>
+                          <a href="results.html#result-table" target="_self" class="btn btn-gold">See Results</a>
+                        </div>
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev announce-arrow announce-arrow-prev" type="button"
+                      data-bs-target="#announceCarousel" data-bs-slide="prev">
+                      <i class="bi bi-arrow-left"></i>
+                    </button>
+                    <button class="carousel-control-next announce-arrow announce-arrow-next" type="button"
+                      data-bs-target="#announceCarousel" data-bs-slide="next">
+                      <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <div class="carousel-indicators announce-indicators">
+                      <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="0"
+                        class="active"></button>
+                      <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="1"></button>
+                      <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="2"></button>
+                      <button type="button" data-bs-target="#announceCarousel" data-bs-slide-to="3"></button>
+                    </div>
+                  </div>
+                </div>
+              </section>
 
-// ========== PHASE 1: Full Screen → Card (0% to 60% of timeline) ==========
-masterTl.to(heroCard, {
-  top: '50%',
-  left: '50%',
-  xPercent: -50,
-  yPercent: -50,
-  width: '60vw',
-  height: '65vh',
-  borderRadius: '24px',
-  ease: 'none'
-}, 0);
+              <!---------------------------------------- Testimonials Slider ------------------------------------------->
+              <section class="testimonials-section">
+                <div class="container">
+                  <div class="text-center mb-5">
+                    <span class="section-tag">Testimonials</span>
+                    <h2 class=" mt-2" style="color: var(--olive-dark); font-weight:900; font-size: 40px;">Voices of
+                      Proud Cadets &amp; Alumni</h2>
+                  </div>
+                  <div id="testimonialCarousel" class="carousel slide testimonial-wrap" data-bs-ride="carousel"
+                    data-bs-interval="4000">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="testimonial-card">
+                          <div class="testimonial-photo-col">
+                            <img src="images/cadet1.webp" loading="lazy" alt="Zainab Rehman"
+                              class="testimonial-photo-img">
+                          </div>
+                          <div class="testimonial-text-col">
+                            <i class="bi bi-quote testimonial-quote-icon"></i>
+                            <div class="testimonial-stars">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">Forces Academy gave me the discipline and confidence I needed
+                              for my ISSB. The mentors treated every cadet like family, pushing us to be our best every
+                              day.</p>
+                            <h5 class="testimonial-name">Zainab Rehman</h5>
+                            <span class="testimonial-meta">Medical Cadet Course — Batch 2023</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="testimonial-card">
+                          <div class="testimonial-photo-col">
+                            <img src="images/cadet2.webp" loading="lazy" alt="Ayesha Malik"
+                              class="testimonial-photo-img">
+                          </div>
+                          <div class="testimonial-text-col">
+                            <i class="bi bi-quote testimonial-quote-icon"></i>
+                            <div class="testimonial-stars">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">The structured preparation here made all the difference. From
+                              physical training to interview practice, every session was purposeful and well-planned.
+                            </p>
+                            <h5 class="testimonial-name">Ayesha Malik</h5>
+                            <span class="testimonial-meta">Lady Cadet Course — Batch 2023</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="testimonial-card">
+                          <div class="testimonial-photo-col">
+                            <img src="images/cadet3.webp" loading="lazy" alt="Hamza Tariq"
+                              class="testimonial-photo-img">
+                          </div>
+                          <div class="testimonial-text-col">
+                            <i class="bi bi-quote testimonial-quote-icon"></i>
+                            <div class="testimonial-stars">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-half"></i>
+                            </div>
+                            <p class="testimonial-text">I joined with zero knowledge about the selection process. The
+                              faculty guided me step by step until I felt fully prepared and confident.</p>
+                            <h5 class="testimonial-name">Hamza Tariq</h5>
+                            <span class="testimonial-meta">AFNS Course — Batch 2024</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="testimonial-card">
+                          <div class="testimonial-photo-col">
+                            <img src="images/cadet4.webp" loading="lazy" alt="Ali Hassan" class="testimonial-photo-img">
+                          </div>
+                          <div class="testimonial-text-col">
+                            <i class="bi bi-quote testimonial-quote-icon"></i>
+                            <div class="testimonial-stars">
+                              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                class="bi bi-star-fill"></i>
+                            </div>
+                            <p class="testimonial-text">Forces Academy Faisalabad isn't just a coaching center, it's a
+                              second home. The discipline I learned here still shapes how I carry myself today.</p>
+                            <h5 class="testimonial-name">Ali Hassan</h5>
+                            <span class="testimonial-meta">PMA Long Course — Batch 2024</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="testimonial-controls">
+                      <div class="carousel-indicators testimonial-indicators">
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0"
+                          class="active"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="3"></button>
+                      </div>
+                      <div class="testimonial-arrows">
+                        <button class="testimonial-arrow-btn" type="button" data-bs-target="#testimonialCarousel"
+                          data-bs-slide="prev"><i class="bi bi-arrow-left"></i></button>
+                        <button class="testimonial-arrow-btn" type="button" data-bs-target="#testimonialCarousel"
+                          data-bs-slide="next"><i class="bi bi-arrow-right"></i></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <!----------------------------------------- CTA SECTION ----------------------------------------------------->
+              <section class="cta-section">
+                <div class="container cta-flex" data-aos="zoom-in">
+                  <div class="cta-text">
+                    <h2 class="mb-3">Ready to Begin Your Journey?</h2>
+                    <p class="mb-4">Admissions are now open. Join a legacy of discipline, honor, and excellence.</p>
+                    <a href="admissions.html" target="_self" class="btn btn-gold cta1 me-2">Apply for Admission</a>
+                    <a href="contact.html" target="_self" class="btn cta2">Contact Us</a>
+                  </div>
+                  <div class="cta-visual" id="ctaVisual">
+                    <div class="cta-ring ring-1"></div>
+                    <div class="cta-ring ring-2"></div>
+                    <div class="cta-ring ring-3"></div>
+                    <div class="cta-ring ring-4"></div>
+                    <div class="cta-path"></div>
+                    <i class="bi bi-person-walking cta-soldier" id="ctaSoldier"></i>
+                  </div>
+                </div>
+              </section>
 
-// Intro Video Heading controlled seperately(disappear on scroll)
-ScrollTrigger.create({
-  trigger: '.landing-hero',
-  start: 'top top',
-  end: '+=10%',
-  onUpdate: (self) => {
-    if (self.progress > 0.1) {
-      gsap.to(heroHeading, { opacity: 0, scale: 0.8, duration: 0.2 });
-    } else {
-      gsap.to(heroHeading, { opacity: 1, scale: 1, duration: 0.2 });
+              <!-------------------------------------------------------- FOOTER ----------------------------------------------->
+              <footer class="site-footer">
+                <div class="container">
+                  <div class="row gy-4">
+                    <!-- Description and Logo -->
+                    <div class="col-lg-4 col-md-6 footer-logo">
+                      <div class="d-flex align-items-center gap-2 mb-3">
+                        <img src="images/logo.jpg" alt="logo" height="30">
+                        <h5 class="pt-3">Forces Academy</h5>
+                      </div>
+                      <p>Empowering students through quality education, discipline, and expert guidance. Building
+                        confidence and shaping future leaders for success.</p>
+                      <div class="social-icons mt-3">
+                        <a href="https://www.facebook.com/forcesacademyfaisalabad" target="_blank"
+                          aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.tiktok.com/@forcesacademyfaisalabad3" target="_blank"
+                          aria-label="Tiktok"><i class="bi bi-tiktok"></i></a>
+                        <a href="https://www.instagram.com/forcesacademyfaisalabad" target="_blank"
+                          aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@forcesacademyfaisalabad" target="_blank"
+                          aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+                      </div>
+                    </div>
+                    <!-- QUICK LINKS -->
+                    <div class="col-lg-2 col-md-6 ">
+                      <h5 class="fw-bold header-title">Quick Links</h5>
+                      <ul class="footer-links">
+                        <li><a href="index.html" target="_self">Home</a></li>
+                        <li><a href="about.html" target="_self">About</a></li>
+                        <li><a href="courses.html" target="_self">Courses</a></li>
+                        <li><a href="admissions.html" target="_self">Admissions</a></li>
+                        <li><a href="results.html" target="_self">Results</a></li>
+                        <li><a href="contact.html" target="_self">Contact</a></li>
+                      </ul>
+                    </div>
+                    <!-- Courses -->
+                    <div class="col-lg-3 col-md-6">
+                      <h5>Courses</h5>
+                      <ul class="footer-links">
+                        <li><a href="courses.html#pma-course" target="_self">PMA Long Course</a></li>
+                        <li><a href="courses.html#afns-course" target="_self">AFNS Course</a></li>
+                        <li><a href="courses.html#llc-course" target="_self">Lady Cadet Course</a></li>
+                        <li><a href="courses.html#paf-course" target="_self">PAF & Navy Test Prep</a></li>
+                        <li><a href="courses.html#issb-course" target="_self">ISSB & GTO Course</a></li>
+                        <li><a href="courses.html#medical-cllg-course" target="_self">Medical Cadet Course</a></li>
+                      </ul>
+                    </div>
+                    <!-- CONTACT -->
+                    <div class="col-lg-3 col-md-6 contact-footer">
+                      <h5 class="fw-bold mb-3 mt-2 header-title">Contact Us</h5>
+                      <ul class="footer-links">
+                        <li><i class="bi bi-geo-alt me-2"></i><a href="contact.html#map">Building 3, near University of
+                            Faisalabad, Canal Road, Faisalabad</a></li>
+                        <li><i class="bi bi-telephone me-2"></i><a href="tel:03478592099">0347 8592099</a></li>
+                        <li><i class="bi bi-envelope me-2"></i><a
+                            href="mailto:info@forcesacademyfsd.edu.pk">info@forcesacademyfsd.edu.pk</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <!-- Copyright -->
+                  <div class="footer-bottom">
+                    <p class="mb-0">&copy; <span id="currentYear">2026</span> Forces Academy Faisalabad. All rights
+                      reserved.</p>
+                  </div>
+                </div>
+              </footer>
+              <!---------------------------------------------- Back to top button ------------------------------------------->
+              <button id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+              <!--------------------------------------------------- SCRIPTS ------------------------------------------------->
+              <!--Bootstrap 5.3 JS bundle -->
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+              <!-- AOS -->
+              <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+              <script>AOS.init({ easing: 'ease-in-out', duration: 600, once: true });</script>
+              <!-- Vanilla Tilt JS -->
+              <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+              <!-- CountUp.js -->
+              <script src="https://cdn.jsdelivr.net/npm/countup.js@2.8.0/dist/countUp.umd.js"></script>
+              <!-- GSAP & ScrollTrigger -->
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+              <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+              <script>
+                // GSAP & ScrollTrigger Setup
+                gsap.registerPlugin(ScrollTrigger);
+
+                // ELEMENTS
+                const heroCard = document.getElementById('heroCard');
+                const heroHeading = document.getElementById('heroHeading');
+                const heroVideo = document.getElementById('heroVideo');
+                const soundBtn = document.getElementById('soundBtn');
+                const heroContentOverlay = document.getElementById('heroContentOverlay');
+
+                // Floating cards
+                const floatCards = [
+                  document.getElementById('card1'),
+                  document.getElementById('card2'),
+                  document.getElementById('card3'),
+                  document.getElementById('card4')
+                ];
+
+                const card1 = floatCards[0];
+                const card2 = floatCards[1];
+                const card3 = floatCards[2];
+                const card4 = floatCards[3];
+
+                // STATE
+                let isMuted = true;
+
+                window.addEventListener('load', () => {
+                  setTimeout(() => {
+                    if (heroHeading) {
+                      ScrollTrigger.refresh();  //initializing gsap
+
+                      heroHeading.classList.add('visible'); //show heading
+                    }
+                  }, 500);
+                });
+                // SOUND BUTTON
+                if (soundBtn) {
+                  soundBtn.addEventListener('click', () => {
+                    isMuted = !isMuted;
+                    if (heroVideo) heroVideo.muted = isMuted;
+                    soundBtn.innerHTML = isMuted ?
+                      '<i class="bi bi-volume-mute-fill"></i>' :
+                      '<i class="bi bi-volume-up-fill"></i>';
+                  });
+                }
+
+                // ----------------SINGLE MASTER TIMELINE--------------------
+                const masterTl = gsap.timeline({
+                  scrollTrigger: {
+                    trigger: '.landing-hero',
+                    start: 'top top',
+                    end: '+=250%',
+                    scrub: 1.5,
+                    pin: true,
+                  }
+                });
+                // PHASE 0: Heading fade (0% to 15%)
+                masterTl.fromTo(heroHeading,
+                  { opacity: 1, scale: 1 },      // Start state (scroll 0%)
+                  { opacity: 0, scale: 0.8, ease: 'power2.out' },  // End state
+                  0.30
+                );
+
+                // ========== PHASE 1: Full Screen Video to Card (0% to 50%) ==========
+                masterTl.to(heroCard, {
+                  top: '50%',
+                  left: '50%',
+                  xPercent: -50,
+                  yPercent: -50,
+                  width: '60vw',
+                  height: '65vh',
+                  borderRadius: '24px',
+                  ease: 'none'
+                }, 0);
+
+                // Scroll indicator & sound button fade out
+                masterTl.to('.scroll-indicator', { opacity: 0, ease: 'none' }, 0);
+                masterTl.to(soundBtn, { opacity: 0, ease: 'none' }, 0.1);
+
+                // Floating cards appear (staggered)
+                floatCards.forEach((card, i) => {
+                  if (card) {
+                    masterTl.to(card, {
+                      opacity: 1,
+                      scale: 1,
+                      ease: 'none'
+                    }, 0.2 + (i * 0.05));
+                  }
+                });
+
+                // Floating cards move to their corner positions
+                if (card1) masterTl.to(card1, { left: '3%', top: '12%', width: '200px', height: '140px', rotation: -3, ease: 'none' }, 0.3);
+                if (card2) masterTl.to(card2, { right: '4%', top: '10%', width: '180px', height: '220px', rotation: 2, ease: 'none' }, 0.35);
+                if (card3) masterTl.to(card3, { left: '5%', bottom: '15%', width: '220px', height: '160px', rotation: 3, ease: 'none' }, 0.4);
+                if (card4) masterTl.to(card4, { right: '3%', bottom: '12%', width: '160px', height: '200px', rotation: -2, ease: 'none' }, 0.45);
+
+                // ========== PHASE 2: Video Card to Right Side (50% to 65%) ==========
+                if (heroCard) {
+                  masterTl.to(heroCard, {
+                    left: '72%',
+                    xPercent: -50,
+                    width: '42vw',
+                    height: '50vh',
+                    ease: 'none'
+                  }, 0.5);
+                }
+
+                // Floating cards adjust slightly as video moves right
+                if (card1) masterTl.to(card1, { left: '2%', top: '10%', ease: 'none' }, 0.5);
+                if (card2) masterTl.to(card2, { right: '2%', top: '8%', ease: 'none' }, 0.5);
+                if (card3) masterTl.to(card3, { left: '4%', bottom: '12%', ease: 'none' }, 0.5);
+                if (card4) masterTl.to(card4, { right: '3%', bottom: '10%', ease: 'none' }, 0.5);
+
+                /// ========== PHASE 3: Card3 Full Screen + Others Fade + Content Appears (65% to 100%) ==========
+
+                // Card3 expands to full screen
+                if (card3) {
+                  masterTl.to(card3, {
+                    top: '0%',
+                    left: '0%',
+                    width: '100vw',
+                    height: '100vh',
+                    borderRadius: '0px',
+                    rotation: 0,
+                    zIndex: 100,
+                    ease: 'none'
+                  }, 0.65);
+                }
+                // gradient overlay on card3 when it become bg
+                const card3Overlay = card3.querySelector('.card3-gradient-overlay');
+                if (card3Overlay) {
+                  masterTl.to(card3Overlay, {
+                    opacity: 1,
+                    ease: 'none'
+                  }, 0.65);
+                }
+
+                // ALL other cards fade out
+                if (card1) masterTl.to(card1, { opacity: 0, scale: 0.5, ease: 'none' }, 0.65);
+                if (card2) masterTl.to(card2, { opacity: 0, scale: 0.5, ease: 'none' }, 0.65);
+                if (card4) masterTl.to(card4, { opacity: 0, scale: 0.5, ease: 'none' }, 0.65);
+                if (heroCard) masterTl.to(heroCard, { opacity: 0, scale: 0.5, ease: 'none' }, 0.65);
+
+                // Content overlay fades IN
+                if (heroContentOverlay) {
+                  masterTl.to(heroContentOverlay, {
+                    opacity: 1,
+                    pointerEvents: 'auto',
+                    ease: 'none'
+                  }, 0.78);
+                }
+
+// -------------------FLOATING IDLE ANIMATION-----------------------
+
+const idleTweens = [];
+  floatCards.forEach((card, i) => {
+    if (card) {
+      const tween = gsap.to(card, {
+         y: '+=12',
+         duration: 2.5 + i * 0.4,
+        repeat: -1,
+         yoyo: true,
+        ease: 'sine.inOut',
+        delay: i * 0.2
+      });
+      idleTweens.push(tween);
     }
-  }
-});
-masterTl.to('.scroll-indicator', {
-  opacity: 0,
-  ease: 'none'
-}, 0);
-masterTl.to(soundBtn, {
-  opacity: 0,
-  ease: 'none'
-}, 0.1);
-// Floating cards appear
-floatCards.forEach((card, i) => {
-  if (card) {
-    masterTl.to(card, {
-      opacity: 1,
-      scale: 1,
-      ease: 'none'
-    }, 0.2 + (i * 0.05));
-  }
-});
-// Floating cards move to positions
-if (floatCards[0]) masterTl.to(floatCards[0], { left: '3%', top: '12%', width: '200px', height: '140px', rotation: -3, ease: 'none' }, 0.3);
-if (floatCards[1]) masterTl.to(floatCards[1], { right: '4%', top: '10%', width: '180px', height: '220px', rotation: 2, ease: 'none' }, 0.35);
-if (floatCards[2]) masterTl.to(floatCards[2], { left: '5%', bottom: '15%', width: '220px', height: '160px', rotation: 3, ease: 'none' }, 0.4);
-if (floatCards[3]) masterTl.to(floatCards[3], { right: '3%', bottom: '12%', width: '160px', height: '200px', rotation: -2, ease: 'none' }, 0.45);
-
-
-// ========== PHASE 2: Card → Right (60% to 100% of timeline) ==========
-
-// Video card goes RIGHT
-masterTl.to(heroCard, {
-  left: '72%',
-  xPercent: -50,
-  width: '42vw',
-  height: '50vh',
-  ease: 'none'
-}, 0.6);  // start on 60% 
-// Floating cards adjust
-if (floatCards[0]) masterTl.to(floatCards[0], { left: '2%', top: '10%', ease: 'none' }, 0.6);
-if (floatCards[1]) masterTl.to(floatCards[1], { right: '2%', top: '8%', ease: 'none' }, 0.6);
-if (floatCards[2]) masterTl.to(floatCards[2], { left: '4%', bottom: '12%', ease: 'none' }, 0.6);
-if (floatCards[3]) masterTl.to(floatCards[3], { right: '3%', bottom: '10%', ease: 'none' }, 0.6);
-
-// FLOATING IDLE ANIMATION (Cards bob up/down)
-floatCards.forEach((card, i) => {
-  if (card) {
-    gsap.to(card, {
-      y: '+=12',
-      duration: 2.5 + i * 0.4,
-      repeat: -1,
-      yoyo: true,
-      ease: 'sine.inOut',
-      delay: i * 0.2
-    });
-  }
-});
-
-// PARALLAX ON SCROLL FOR FLOATING CARDS
-floatCards.forEach((card, i) => {
-  if (card) {
-    gsap.to(card, {
-      scrollTrigger: {
-        trigger: '.content-section',
-        start: 'top bottom',
-        end: 'bottom top',
-        scrub: 1
-      },
-      y: (i % 2 === 0) ? -50 : 50,
-      ease: 'none'
-    });
-  }
-});</script>
+  });
+  
+// Stop card3 idle before expand
+  masterTl.call(() => {
+    if (idleTweens[2]) idleTweens[2].kill();
+    if (card3) gsap.set(card3, { y: 0 });
+  }, null, 0.64);</script>
 
 
 <script src="js/main.js"></script>
 </body>
+
 </html>

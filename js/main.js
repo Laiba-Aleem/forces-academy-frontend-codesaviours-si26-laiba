@@ -146,22 +146,6 @@ if (contactForm) {
     });
 }
 
-// ------------------------------------------------- NAVBAR  ------------------------------------------------------
-
-/* TRANSPARENT NAVBAR ON VIDEO ,revealed on SCROLL */
-const navbar = document.getElementById('mainNav');
-const landingHero = document.querySelector('.landing-hero');
-function updateNavbar() {
-  const heroBottom = landingHero.getBoundingClientRect().bottom;
-  if (heroBottom <= 80) {
-    navbar.classList.add('nav-scrolled');
-  } else {
-    navbar.classList.remove('nav-scrolled');
-  }
-}
-window.addEventListener('scroll', updateNavbar);
-window.addEventListener('load', updateNavbar);
-updateNavbar();
 
 // -------------------------------------------------- HOME PAGE ---------------------------------------------------
 
@@ -254,7 +238,7 @@ if (backBtn) {
 }
 
 /*------------------- WHY CHOOSE US SECTION -----------------------*/
-// WHY CHOOSE US — card expand/collapse
+// WHY CHOOSE US — card expand or collapse
 const whyCards = document.querySelectorAll(".why-card");
 whyCards.forEach(card => {
   card.addEventListener("click", () => {
@@ -282,3 +266,19 @@ var yearSpan = document.getElementById('currentYear');
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
+// ------------------------------------------------- NAVBAR  ------------------------------------------------------
+
+/* TRANSPARENT NAVBAR ON VIDEO ,revealed on SCROLL */
+const navbar = document.getElementById('mainNav');
+const landingHero = document.querySelector('.landing-hero');
+function updateNavbar() {
+  const heroBottom = landingHero.getBoundingClientRect().bottom;
+  if (heroBottom <= 80) {
+    navbar.classList.add('nav-scrolled');
+  } else {
+    navbar.classList.remove('nav-scrolled');
+  }
+}
+window.addEventListener('scroll', updateNavbar);
+window.addEventListener('load', updateNavbar);
+updateNavbar();

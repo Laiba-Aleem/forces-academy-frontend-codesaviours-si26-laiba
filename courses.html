@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,7 +23,7 @@
 </head>
 
 <body>
-  <!--NAVBAR SECTION-->
+  <!--------------------------------------------NAVBAR SECTION------------------------------------------->
   <nav class="navbar navbar-expand-lg sticky-top" id="mainNav">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
@@ -71,36 +70,78 @@
     </div>
   </nav>
 
-  <!-- Page Banner -->
-  <header class="page-banner courses-banner">
-    <div class="container">
-      <h1 data-aos="fade-up" class="fw-bold">Our Courses</h1>
-      <nav data-aos="fade-up" data-aos-delay="100" aria-label="breadcrumb">
-        <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-divider-color: var(--gold);">
-          <li class="breadcrumb-item"><a href="index.html" style="color: var(--gold); text-decoration: none;">Home</a>
-          </li>
-          <li class="breadcrumb-item active" aria-current="page" style="color: var(--gold);">Courses</li>
-        </ol>
-      </nav>
-    </div>
-  </header>
+<!--------------------------------------------- COURSES HERO BANNER ------------------------------------------>
+<section class="split-hero courses-bg">
+  <div class="container">
+                <div class="split-hero-text" data-aos="fade-up">
 
-  <!-- Heading and Intro -->
-  <section class="section-padding section-mission">
-    <div class="container">
-      <div class="text-center mb-5" data-aos="fade-up">
-        <p class="section-eyebrow">Programs</p>
-        <h2 class="section-title fw-bold">Choose Your Path</h2>
-        <p class="section-title" style="font-size: 1.3rem;">Explore our programs designed to inspire excellence and
-          shape future leaders </p>
-        <div class="title-underline" style="margin-left: 47%;"></div>
-      </div>
+    <nav aria-label="breadcrumb" class="mb-3" data-aos="fade-up">
+      <ol class="breadcrumb" style="--bs-breadcrumb-divider: '>'; --bs-breadcrumb-divider-color: var(--gold);">
+        <li class="breadcrumb-item"><a href="index.html" style="color: var(--gold); text-decoration:none;">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page" style="color: var(--gold);">Courses</li>
+      </ol>
+    </nav>
+    <span class="section-tag section-eyebrow" style="color: var(--cream);">Programs</span>
+        <h1 class="fw-bold split-hero-title">Train With The Best</h1>
+        <p class="split-hero-subtitle">Explore our programs designed to inspire excellence and shape future leaders.</p>
+
+        <div class="courses-hero-highlights">
+          <span><i class="bi bi-check2-circle"></i> Expert Mentors</span>
+          <span><i class="bi bi-check2-circle"></i> ISSB & Test Prep</span>
+          <span><i class="bi bi-check2-circle"></i> Proven Track Record</span>
+        </div>
+      </div></div>
+  <div class="scroll-chevron"><i class="bi bi-chevron-down"></i></div>
+</section>
+
+<!-------------------------------------------- FIND YOUR PATH SECTION --------------------------------------------->
+<section class="find-path-section">
+  <div class="container">
+    <div class="text-center mb-5" data-aos="fade-up">
+      <p class="section-eyebrow">Programs</p>
+      <h2 class="section-title fw-bold">Find the Right Path</h2>
+      <p class="find-path-sub">Six specialized tracks — each mapped to a different entry test and eligibility.</p>
+    </div>
+
+    <div class="find-path-list">
+      <a href="#pma-course" class="fp-item featured" data-aos="fade-right">
+        <span class="fp-name">PMA Long Course Preparation</span>
+        <span class="fp-meta">1.5–2 Months</span>
+      </a>
+      <a href="#afns-course" class="fp-item" data-aos="fade-left">
+        <span class="fp-name">Armed Forces Nursing Services (AFNS)</span>
+        <span class="fp-meta">2–4.5 Months</span>
+      </a>
+      <a href="#llc-course" class="fp-item" data-aos="fade-right">
+        <span class="fp-name">Lady Cadet Course (LCC)</span>
+        <span class="fp-meta">1–1.5 Months</span>
+      </a>
+      <a href="#paf-course" class="fp-item" data-aos="fade-left">
+        <span class="fp-name">PAF and Pak Navy Test Prep</span>
+        <span class="fp-meta">1.5 Months</span>
+      </a>
+      <a href="#issb-course" class="fp-item" data-aos="fade-right">
+        <span class="fp-name">ISSB Obstacle &amp; GTO Course</span>
+        <span class="fp-meta">5 Days–2 Weeks</span>
+      </a>
+      <a href="#medical-cllg-course" class="fp-item" data-aos="fade-left">
+        <span class="fp-name">Medical Cadet Course Preparation</span>
+        <span class="fp-meta">2–3 Months</span>
+      </a>
+    </div>
+  </div>
+</section>
+<section class="section-padding section-mission all-courses-card-section">
+  <div class="text-center mb-5" data-aos="fade-in">
+    <span class="section-tag mb-3">Details</span>
+  <h2 class="section-title fw-bold">Explore Each Program</h2>
+</div>
       <div class="row g-4">
         <!-- Course Card 1 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in">
           <div class="card" id="pma-course">
+              <img src="images/course-pma.webp" loading="lazy" alt="PMA Long Course" class="course-card-img">
             <div class="card-body">
-              <div class="icon-circle"><i class="bi bi-shield-check"></i></div>
               <h5 class="card-title">PMA Long Course Preparation</h5>
               <p class="card-text">Prepare for Pakistan Army regular commission with complete test and ISSB training.
               </p>
@@ -115,8 +156,8 @@
         <!-- Course Card 2 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="100">
           <div class="card" id="afns-course">
+              <img src="images/course-afns.webp" loading="lazy" alt="AFNS Course" class="course-card-img">
             <div class="card-body">
-              <div class="icon-circle"><i class="bi bi-heart-pulse-fill"></i></div>
               <h5 class="card-title">Armed Forces Nursing Services (AFNS)</h5>
               <p class="card-text">Preparation for Army Nursing entry tests, interviews, and ISSB.</p>
               <ul class="list-group list-group-flush pb-4">
@@ -130,8 +171,8 @@
         <!-- Course Card 3 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="200">
           <div class="card" id="llc-course">
+              <img src="images/course-llc.webp" loading="lazy" alt="LLC Course" class="course-card-img">
             <div class="card-body">
-              <div class="icon-circle"><i class="bi bi-person-badge-fill"></i></div>
               <h5 class="card-title">Lady Cadet Course (LCC)</h5>
               <p class="card-text">Comprehensive Preparation for direct commission as a Lady Cadet through SSRC with our
                 expert and specialized ISSB training.</p>
@@ -146,8 +187,8 @@
         <!-- Course Card 4 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in">
           <div class="card" id="paf-course">
+              <img src="images/course-paf.webp" loading="lazy" alt="paf Course" class="course-card-img">
             <div class="card-body">
-              <div class="icon-circle"><i class="bi bi-airplane-fill"></i></div>
               <h5 class="card-title">PAF and Pak Navy Initial Test Prep</h5>
               <p class="card-text">Training for PAF and Pak Navy entry tests and interviews.</p>
               <ul class="list-group list-group-flush">
@@ -161,8 +202,8 @@
         <!-- Course Card 5 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="100">
           <div class="card" id="issb-course">
+              <img src="images/gallery3-training.jpg" loading="lazy" alt=" ISSB Course" class="course-card-img">
             <div class="card-body">
-              <div class="icon-circle"><i class="bi bi-lightning-charge-fill"></i></div>
               <h5 class="card-title">ISSB Obstacle & GTO Course</h5>
               <p class="card-text">Practical GTO tasks and obstacle training for ISSB candidates.</p>
               <ul class="list-group list-group-flush pb-4">
@@ -176,8 +217,8 @@
         <!-- Course Card 6 -->
         <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="200">
           <div class="card">
+              <img src="images/course-medical.webp" loading="lazy" alt="Medical cllg Course" class="course-card-img">
             <div class="card-body" id="medical-cllg-course">
-              <div class="icon-circle"><i class="bi bi-clipboard2-pulse-fill"></i></div>
               <h5 class="card-title">Medical Cadet Course Preparation</h5>
               <p class="card-text">Preparation for Army Medical College entry and intelligence tests.</p>
               <ul class="list-group list-group-flush">
@@ -193,13 +234,15 @@
   </section>
 
   <!-- Call To Action -->
-  <section class="section-padding cta-section">
-    <div class="container" data-aos="zoom-in">
+  <section class="cta-section courses-cta-bg">
+  <div class="container" data-aos="zoom-in">
+    <div class="cta-text text-center"> 
       <h2 class="mb-3">Not Sure Which Course Fits You?</h2>
       <p class="mb-4">Our Counsellors will help you choose the right program for your goals.</p>
-      <a href="contact.html" class="btn btn-gold cta1 me-2">Talk to a Counsellor</a>
+      <a href="contact.html" class="btn btn-gold">Talk to a Counsellor</a>
     </div>
-  </section>
+  </div>
+</section>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -265,6 +308,9 @@
       </div>
     </div>
   </footer>
+<!---------------------------------------------- Back to top button ------------------------------------------->
+<button id="backToTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+<!--------------------------------------------------- SCRIPTS ------------------------------------------------->
   <!-- Bootstrap 5.3 JS bundle -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <!-- AOS -->
