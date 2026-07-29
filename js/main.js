@@ -39,6 +39,7 @@ buttons.forEach(button => {
                 }
             });
             wrapper.classList.remove("loading");
+            AOS.refresh();
         }, 250);
     });
 });

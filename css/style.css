@@ -308,13 +308,6 @@ body {
   margin: 0;
   line-height: 1;
 }
-.accent-word {
-  font-family: 'Fraunces', Georgia, serif;
-  font-style: italic;
-  font-weight: 600;
-  font-variation-settings: "SOFT" 60, "WONK" 1;
-  color: var(--gold-light);
-}
 .curve-tagline {
   width: 100%;
   max-width: 420px;
@@ -2485,6 +2478,7 @@ letter-spacing: 0.1em;
   margin-bottom: 14px;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(8px);
+  transition: 0.3s;
 }
 .contact-faq-btn {
   background: transparent !important;
@@ -2506,9 +2500,6 @@ letter-spacing: 0.1em;
   color: var(--olive-dark);
   line-height: 1.8;
   padding: 0 22px 22px;
-}
-.contact-faq-item {
-  transition: 0.3s;
 }
 .contact-faq-item:hover {
   transform: translateY(-3px);
