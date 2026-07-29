@@ -27,7 +27,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #fff;
   color: var(--cream);
-  overflow-x: hidden;
 }
 /* ------------------------------------------------ NAVBAR -------------------------------------------------*/
 #mainNav {
@@ -610,7 +609,7 @@ body {
   background-color: var(--gold) !important;
   border: 2px solid var(--gold) !important;
   color: var(--olive-darker);
-  border-radius: 30px;              /* pill-shape — yehi ab differentiator hai, .btn-gold sharp-edge (radius:0) use karta hai */
+  border-radius: 30px;        
   padding: 0.5rem 1.3rem;
   font-weight: 600;
   display: inline-flex;
@@ -620,7 +619,7 @@ body {
   overflow: hidden;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
-/* wahi shimmer-sweep jo .btn-gold mein hai */
+/*shimmer-sweep*/
 .btn-portal::before {
   content: '';
   position: absolute;
@@ -1403,7 +1402,7 @@ margin-bottom: 18px;
 .split-hero-text .breadcrumb {
   justify-content: flex-start;
 }
-.split-hero-text { flex: 1; min-width: 320px; }
+.split-hero-text { flex: 1; }
 .split-hero-title {
   font-size: clamp(2.2rem, 4.5vw, 3.4rem);
   color: var(--cream);
