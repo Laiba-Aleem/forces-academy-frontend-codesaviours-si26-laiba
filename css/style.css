@@ -606,12 +606,44 @@ body {
 }
 
 /* -------------------------------------------- BUTTONS -----------------------------------------------------*/
+.btn-portal {
+  background-color: var(--gold) !important;
+  border: 2px solid var(--gold) !important;
+  color: var(--olive-darker);
+  border-radius: 30px;              /* pill-shape — yehi ab differentiator hai, .btn-gold sharp-edge (radius:0) use karta hai */
+  padding: 0.5rem 1.3rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+/* wahi shimmer-sweep jo .btn-gold mein hai */
+.btn-portal::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.5s ease;
+}
+.btn-portal:hover::before { left: 100%; }
+.btn-portal:hover {
+  background-color: var(--gold-dark) !important;
+  border-color: var(--gold-dark) !important;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(200, 160, 78, 0.3);
+}
+
 a.btn.btn-gold,
 .btn.btn-gold {
   background-color: var(--gold) !important;
   border: 2px solid var(--gold) !important;
   color: var(--olive-darker);
-  font-weight: 635;
+  font-weight: 600;
   padding: 0.6rem 1.5rem;
   border-radius: 0;
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
@@ -2544,6 +2576,9 @@ letter-spacing: 0.1em;
   padding: 10px 24px;
   font-weight: 600;
   transition: 0.3s;
+}
+.btn-gold2{
+  border: 1px solid var(--gold);
 }
 .help-btn:hover,
 .btn-gold2:hover {
