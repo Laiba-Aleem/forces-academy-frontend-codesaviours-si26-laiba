@@ -28,6 +28,9 @@ body {
   background-color: #fff;
   color: var(--cream);
 }
+.page-content-wrap {
+  overflow-x: hidden;
+}
 /* ------------------------------------------------ NAVBAR -------------------------------------------------*/
 #mainNav {
   background: linear-gradient(135deg, rgba(31, 36, 19, 0.99) 70%, rgba(131, 120, 46, 0.91) 100%);
@@ -1640,7 +1643,7 @@ letter-spacing: 0.1em;
   z-index: 3;
 }
 @media (min-width: 992px) {
-  .apply-steps-row { position: relative; overflow-x: hidden; }
+  .apply-steps-row { position: relative; }
   .apply-steps-row::before {
     content: "";
     position: absolute;
