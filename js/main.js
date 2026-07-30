@@ -273,6 +273,7 @@ if (yearSpan) {
 const navbar = document.getElementById('mainNav');
 const landingHero = document.querySelector('.landing-hero');
 function updateNavbar() {
+    if (!navbar || !landingHero) return;
   const heroBottom = landingHero.getBoundingClientRect().bottom;
   if (heroBottom <= 80) {
     navbar.classList.add('nav-scrolled');
