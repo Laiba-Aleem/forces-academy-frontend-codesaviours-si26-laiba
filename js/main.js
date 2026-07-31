@@ -200,28 +200,24 @@ if (announceCarouselEl && tints.length) {
   });
 }
 
-/*-------------------- CTA SECTION VISUAL ----------------------------*/
-// CTA soldier(march left to right on scroll))
+/*-------------------- CTA COMPASS NEEDLE SPIN ----------------------------*/
 const ctaSection = document.querySelector(".cta-section");
-const ctaSoldier = document.getElementById("ctaSoldier");
-if (ctaSection && ctaSoldier) {
-  window.addEventListener("scroll", () => {
-    const rect = ctaSection.getBoundingClientRect();
-    const winH = window.innerHeight;
-    const total = rect.height + winH;
-    const scrolled = winH - rect.top;
-    const progress = Math.min(Math.max(scrolled / total, 0), 1);
-
-    if (window.innerWidth < 768) {
-      const percent = 12 + progress * 70;   // 12% to 82% soldier march on path
-      ctaSoldier.style.top = `${percent}%`;
-      ctaSoldier.style.left = `50%`;
-    } else {
-      const percent = 10 + progress * 80;   // 10% to 90% soldier march on path
-      ctaSoldier.style.left = `${percent}%`;
-      ctaSoldier.style.top = `50%`;
-    }
+const compassNeedle = document.getElementById("compassNeedle");
+if (ctaSection && compassNeedle) {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        // Section visible - spin start
+        compassNeedle.classList.add("spin-in");
+      } else {
+        // Section invisible — class remove so it spin again on visibility
+        compassNeedle.classList.remove("spin-in");
+      }
+    });
+  }, {
+    threshold: 0.7  // trigger on 70% section visible
   });
+  observer.observe(ctaSection);
 }
 
 /* ------------------- Back to Top BUTTON ---------------------- */
