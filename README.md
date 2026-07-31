@@ -8,22 +8,37 @@ A responsive, multi-page frontend website built for Forces Academy Faisalabad, d
 ## Screenshots
 
 ### Home Page
-**Landing hero (video intro):**
+**Landing hero** — Full-screen video intro with cinematic scroll animation.
 <img width="1353" height="640" alt="home-hero" src="https://github.com/user-attachments/assets/b70033e3-a004-4c59-b1d6-01e21de9d307" />
-**Landing hero (scrolled — main content reveal):**
+**Landing hero (scrolled — main content reveal)<img width="829" height="520" alt="about" src="https://github.com/user-attachments/assets/5c1b85e1-646a-4ff9-9018-7f2b70faa69f" />
+**
 <img width="1349" height="640" alt="home-content" src="https://github.com/user-attachments/assets/a78d814b-3b72-4059-858f-c65ed377aaf2" />
 
 ### About Page
-<img width="1350" height="640" alt="about" src="https://github.com/user-attachments/assets/f4df8137-2b04-4998-a796-fbc8752500e8" />
+**Who We Are** — Academy legacy, mission, and cadet formation.
+<img width="829" height="520" alt="about" src="https://github.com/user-attachments/assets/91fd852e-5bd5-4931-824c-d1817495ec41" />
 
 ### Courses Page
-<img width="1352" height="640" alt="courses" src="https://github.com/user-attachments/assets/95710616-87aa-4efe-867f-0f5e219e9f23" />
+**Programs** — Course cards with duration, eligibility, and entry requirements.
+<img width="832" height="521" alt="courses-cards" src="https://github.com/user-attachments/assets/8adee09a-33d8-42fb-a56a-8eeaaf4a4f3a" />
 
 ### Admissions Page
-<img width="1349" height="640" alt="admissions" src="https://github.com/user-attachments/assets/8a2da90d-4194-4dd1-9e64-ddb120b33380" />
+**Eligibility** — Six specialized program tracks, each with detailed eligibility criteria.
+<img width="832" height="514" alt="admissions-criteria" src="https://github.com/user-attachments/assets/283ae57d-0bee-4d98-9bca-5faefd51cee8" />
+
+**Online Registration** — Application modal with form validation and program selection.
+<img width="834" height="517" alt="admissions-registration" src="https://github.com/user-attachments/assets/2c05287a-94fa-4de7-be13-937d5068fa63" />
+
+### Gallery Page
+**Success Stories** — Hall of Fame with cadet profiles, achievement stats, and featured testimonials.
+<img width="831" height="521" alt="hall-of-fame" src="https://github.com/user-attachments/assets/d70f512a-c1d1-4f39-9bcf-30e5c0d74d66" />
+
+**Moments We Cherish** — Filterable photo gallery by category (Study, Training, Classroom, Events).
+<img width="833" height="518" alt="gallery-grid" src="https://github.com/user-attachments/assets/8978c24a-be6c-4c85-b4fc-c93b04d25250" />
 
 ### Contact Page
-<img width="1350" height="637" alt="contact" src="https://github.com/user-attachments/assets/a6da3bdc-b5b3-41f6-bd41-9c9443c52ef3" />
+**FAQ & Contact Form** — Accordion-based questions, message form, and WhatsApp integration.
+<img width="834" height="521" alt="contact" src="https://github.com/user-attachments/assets/1feadd8f-4fb7-464c-abb8-e8b129ae226f" />
 
 ## Tech Stack
 - HTML5
