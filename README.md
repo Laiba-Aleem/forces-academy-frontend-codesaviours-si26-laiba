@@ -58,6 +58,7 @@ A responsive, multi-page frontend website built for Forces Academy Faisalabad, d
 - Fully responsive across mobile, tablet, and desktop; cross-browser tested (Chrome, Firefox, Edge)
 
 ## 📁 Project Structure
+```
 ├── index.html
 ├── about.html
 ├── courses.html
@@ -70,6 +71,7 @@ A responsive, multi-page frontend website built for Forces Academy Faisalabad, d
 ├── js/
 │   └── main.js
 └── images/
+```
 
 ## Future Improvements
 - Results table's PDF-download buttons and pagination are currently static — full functionality requires backend/database integration, which is outside this track's scope.
