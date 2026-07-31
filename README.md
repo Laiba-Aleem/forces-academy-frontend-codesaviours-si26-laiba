@@ -10,7 +10,7 @@ A responsive, multi-page frontend website built for Forces Academy Faisalabad, d
 ### Home Page
 **Landing hero** — Full-screen video intro with cinematic scroll animation.
 <img width="1353" height="640" alt="home-hero" src="https://github.com/user-attachments/assets/b70033e3-a004-4c59-b1d6-01e21de9d307" />
-**Landing hero (scrolled — main content reveal)**
+**Main content reveal** — Academy mission, CTAs, and parade hero section.
 <img width="1349" height="640" alt="home-content" src="https://github.com/user-attachments/assets/a78d814b-3b72-4059-858f-c65ed377aaf2" />
 
 ### About Page
