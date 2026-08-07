@@ -4,7 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forces Academy</title>
+  <meta name="description" content="Browse photos, Hall of Fame achievements, and campus life at Forces Academy Faisalabad — training, events, and cadet milestones.">
+  <meta name="keywords" content="Forces Academy gallery, cadet photos, Hall of Fame, campus life Faisalabad">
+  <meta property="og:title" content="Gallery — Forces Academy Faisalabad">
+  <meta property="og:description" content="Moments and milestones from life at Forces Academy Faisalabad.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laiba-aleem.github.io/forces-academy-frontend-codesaviours-si26-laiba/gallery.html">
+  <meta property="og:image" content="images/hero.webp">
+  <title>Gallery | Forces Academy Faisalabad</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- iOS home screen icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <!-- PNG fallbacks for sharper rendering at small sizes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <!-- Web app manifest -->
+  <link rel="manifest" href="images/site.webmanifest">
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -68,6 +83,9 @@
           <li class="nav-item">
             <a class="btn btn-portal" href="#"><i class="bi bi-person-circle"></i> Student Portal</a>
           </li>
+          <li class="nav-item d-flex align-items-center ps-2" style="border-left:1px solid rgba(200,160,78,0.2); margin-left:8px;">
+            <button id="darkModeToggle" class="dark-toggle-btn" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-fill"></i> </button></li>
         </ul>
       </div>
     </div>
@@ -112,7 +130,7 @@
     <!---------------------------------------------- GALLERY -------------------------------------------------->
     <div class="gallery-wrapper">
       <!-- Study Row -->
-      <section id="study" class="gallery-section" data-aos="fade-in" data-aos-delay="170">
+      <section id="study" class="gallery-section" data-aos="fade" data-aos-delay="170">
         <div class="row gallery-row left-scroll gy-4">
           <div class="gal-imgs col-lg-3 col-md-6 col-12" data-category="study">
             <a href="images/gallery1-study.jpg" class="glightbox" data-gallery="academy-gallery"
@@ -237,19 +255,19 @@
 <section class="hall-of-fame-section">
   <div class="container">
     <!-- Header -->
-    <div class="text-center mb-5" data-aos="fade-up">
+    <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="0">
       <span class="hof-label">Legacy of Excellence</span>
       <h2 class="hof-title">Our Success Stories</h2>
       <p class="hof-subtitle">500+ cadets proudly serving in Pakistan Armed Forces</p>
     </div>
     <!-- Main Row -->
-    <div class="row g-4" data-aos="fade-up" data-aos-delay="100">
+    <div class="row g-4">
       <!-- Left: Cards + Stats -->
       <div class="col-lg-8">
         <!-- 5 Cards Row -->
         <div class="row g-3 mb-4">
 
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-delay="100">
             <div class="hof-card">
               <div class="hof-card-img">
                 <img src="images/candidate-1.webp" alt="Ahmad Raza">
@@ -265,7 +283,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-delay="200">
             <div class="hof-card">
               <div class="hof-card-img">
                 <img src="images/candidate-2.webp" alt="Fatima Khan">
@@ -281,7 +299,7 @@
             </div>
           </div>
 
-          <div class="col">
+          <div class="col" data-aos="fade-up" data-aos-delay="300">
             <div class="hof-card">
               <div class="hof-card-img">
                 <img src="images/candidate-3.webp" alt="Bilal Tariq">
@@ -297,7 +315,7 @@
             </div>
           </div>
 
-          <div class="col d-none d-md-block">
+          <div class="col d-none d-md-block" data-aos="fade-up" data-aos-delay="400">
             <div class="hof-card">
               <div class="hof-card-img">
                 <img src="images/candidate-4.webp" alt="Zainab Malik">
@@ -313,7 +331,7 @@
             </div>
           </div>
 
-          <div class="col d-none d-lg-block">
+          <div class="col d-none d-lg-block" data-aos="fade-up" data-aos-delay="500">
             <div class="hof-card">
               <div class="hof-card-img">
                 <img src="images/candidate-5.webp" alt="Hamza Ali">
@@ -331,7 +349,7 @@
 
         </div>
         <!-- Stats Bar -->
-        <div class="hof-stats-bar d-flex align-items-center justify-content-around">
+        <div class="hof-stats-bar d-flex align-items-center justify-content-around" data-aos="fade" data-aos-delay="100">
           <div class="hof-stat text-center">
             <span class="hof-stat-num">500+</span>
             <span class="hof-stat-label">Serving Officers</span>
@@ -350,7 +368,7 @@
 
       </div>
       <!-- Right: Spotlight -->
-      <div class="col-lg-4">
+      <div class="col-lg-4" data-aos="fade-up" data-aos-delay="600">
         <div class="hof-spotlight">
           <span class="hof-spotlight-tag">
             <i class="bi bi-trophy"></i> Featured Success
@@ -380,15 +398,15 @@
 
 <!---------------------------------- VIDEO SECTION ------------------------------------------->
 <section class="video-section">
-  <div class="container" data-aos="fade-up">
+  <div class="container">
     <!-- Header -->
-    <div class="text-center mb-5">
+    <div class="text-center mb-5" data-aos="fade-up">
       <span class="hof-label">Life at the Academy</span>
       <h2 class="hof-title video-title">Training in Action</h2>
       <p class="hof-subtitle video-subtitle">Watch our cadets push their limits</p>
     </div>
     <!-- Featured Video -->
-    <div class="row justify-content-center mb-4">
+    <div class="row justify-content-center mb-4" data-aos="fade">
       <div class="col-lg-8">
         <a href="https://www.youtube.com/watch?v=HVj7JX_sXuw" class="glightbox video-featured" data-type="video">
           <img src="https://img.youtube.com/vi/HVj7JX_sXuw/maxresdefault.jpg" alt="Forces Academy Faisalabad">
@@ -399,7 +417,7 @@
       </div>
     </div>
     <!-- 3 Thumbnails -->
-    <div class="row g-3 justify-content-center">
+    <div class="row g-3 justify-content-center" data-aos="fade">
       <!-- Thumb 1: Maha Sarwar -->
       <div class="col-md-4 col-6">
         <a href="https://www.youtube.com/watch?v=YsRmqm9E4Ck" class="glightbox video-thumb" data-type="video">
@@ -411,7 +429,7 @@
       </div>
 
       <!-- Thumb 2: Cadet Moeez -->
-      <div class="col-md-4 col-6">
+      <div class="col-md-4 col-6" data-aos="fade">
         <a href="https://www.youtube.com/watch?v=AMYHBhzcy4E" class="glightbox video-thumb" data-type="video">
           <img src="https://img.youtube.com/vi/AMYHBhzcy4E/mqdefault.jpg" alt="Gentleman Cadet Moeez">
           <div class="video-play-overlay small">
@@ -421,7 +439,7 @@
       </div>
 
       <!-- Thumb 3: Academy Short -->
-      <div class="col-md-4 col-6">
+      <div class="col-md-4 col-6" data-aos="fade">
         <a href="https://www.youtube.com/shorts/RvTNq7_h2yE" class="glightbox video-thumb" data-type="video">
           <img src="https://img.youtube.com/vi/RvTNq7_h2yE/mqdefault.jpg" alt="Academy Life">
           <div class="video-play-overlay small">

@@ -3,7 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Forces Academy</title>
+  <meta name="description" content="Explore six specialized training programs at Forces Academy Faisalabad — PMA, AFNS, Lady Cadet Course, PAF/Navy prep, ISSB, and Medical Cadet Course.">
+  <meta name="keywords" content="PMA course, AFNS preparation, Lady Cadet Course, ISSB training, PAF entry test, Medical Cadet Course">
+  <meta property="og:title" content="Courses & Programs — Forces Academy Faisalabad">
+  <meta property="og:description" content="Six specialized tracks, each mapped to a different entry test and eligibility.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://laiba-aleem.github.io/forces-academy-frontend-codesaviours-si26-laiba/courses.html">
+  <meta property="og:image" content="images/hero.webp">
+  <title>Courses | PMA, AFNS, ISSB & PAF | Forces Academy</title>
+  <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+  <!-- iOS home screen icon -->
+  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+  <!-- PNG fallbacks for sharper rendering at small sizes -->
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <!-- Web app manifest -->
+  <link rel="manifest" href="images/site.webmanifest">
   <!-- Google Fonts: Poppins -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -65,6 +80,9 @@
           <li class="nav-item">
             <a class="btn btn-portal" href="#"><i class="bi bi-person-circle"></i> Student Portal</a>
           </li>
+          <li class="nav-item d-flex align-items-center ps-2" style="border-left:1px solid rgba(200,160,78,0.2); margin-left:8px;">
+            <button id="darkModeToggle" class="dark-toggle-btn" aria-label="Toggle dark mode">
+            <i class="bi bi-moon-fill"></i> </button></li>
         </ul>
       </div>
     </div>
@@ -132,15 +150,16 @@
     </div>
   </div>
 </section>
+<!------------------------------==------- COURSE CARDS --------------------------------------------->
 <section class="section-padding section-mission all-courses-card-section">
-  <div class="text-center mb-5" data-aos="fade-in">
+  <div class="text-center mb-5" data-aos="fade">
     <span class="section-tag mb-3">Details</span>
   <h2 class="section-title fw-bold" style="color: var(--cream);">Explore Each Program</h2>
 </div>
 <div class="container">
       <div class="row g-4">
         <!-- Course Card 1 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="0">
           <div class="card" id="pma-course">
               <img src="images/course-pma.webp" loading="lazy" alt="PMA Long Course" class="course-card-img">
             <div class="card-body">
@@ -156,7 +175,7 @@
           </div>
         </div>
         <!-- Course Card 2 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="100">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="100">
           <div class="card" id="afns-course">
               <img src="images/course-afns.webp" loading="lazy" alt="AFNS Course" class="course-card-img">
             <div class="card-body">
@@ -171,7 +190,7 @@
           </div>
         </div>
         <!-- Course Card 3 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="200">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="200">
           <div class="card" id="llc-course">
               <img src="images/course-llc.webp" loading="lazy" alt="LLC Course" class="course-card-img">
             <div class="card-body">
@@ -187,7 +206,7 @@
           </div>
         </div>
         <!-- Course Card 4 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="0">
           <div class="card" id="paf-course">
               <img src="images/course-paf.webp" loading="lazy" alt="paf Course" class="course-card-img">
             <div class="card-body">
@@ -202,9 +221,9 @@
           </div>
         </div>
         <!-- Course Card 5 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="100">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="100">
           <div class="card" id="issb-course">
-              <img src="images/gallery3-training.jpg" loading="lazy" alt=" ISSB Course" class="course-card-img">
+              <img src="images/gallery3-training.jpg" loading="lazy" alt="ISSB Course" class="course-card-img">
             <div class="card-body">
               <h5 class="card-title">ISSB Obstacle & GTO Course</h5>
               <p class="card-text">Practical GTO tasks and obstacle training for ISSB candidates.</p>
@@ -217,7 +236,7 @@
           </div>
         </div>
         <!-- Course Card 6 -->
-        <div class="col-md-6 col-lg-4" data-aos="fade-in" data-aos-delay="200">
+        <div class="col-md-6 col-lg-4" data-aos="fade" data-aos-delay="200">
           <div class="card">
               <img src="images/course-medical.webp" loading="lazy" alt="Medical cllg Course" class="course-card-img">
             <div class="card-body" id="medical-cllg-course">

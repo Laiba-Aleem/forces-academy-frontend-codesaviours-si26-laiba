@@ -243,6 +243,19 @@ whyCards.forEach(card => {
     card.classList.add("active");
   });
 });
+// transition on screen in contact
+const whySection = document.querySelector('.why-section');
+if (whySection) {
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        document.querySelectorAll('.why-card').forEach(card => card.classList.add('in-view'));
+        cardObserver.disconnect();
+      }
+    });
+  }, { threshold: 0.4 });
+  cardObserver.observe(whySection);
+}
 
 /*------------------- for lazy loading images ---------------------*/
 const lazyBgElements = document.querySelectorAll('[data-bg]');
@@ -280,3 +293,27 @@ function updateNavbar() {
 window.addEventListener('scroll', updateNavbar);
 window.addEventListener('load', updateNavbar);
 updateNavbar();
+
+// ----------------------------------------------- DARK MODE TOGGLE ------------------------------------------------
+
+const darkToggle = document.getElementById('darkModeToggle');
+const darkIcon = darkToggle ? darkToggle.querySelector('i') : null;
+
+function applyDarkMode(isDark) {
+  document.body.classList.toggle('dark-mode', isDark);
+  if (darkIcon) {
+    darkIcon.className = isDark ? 'bi bi-sun-fill' : 'bi bi-moon-fill';
+  }
+}
+
+// Page load pe saved preference check karo
+const savedMode = localStorage.getItem('darkMode');
+applyDarkMode(savedMode === 'true');
+
+if (darkToggle) {
+  darkToggle.addEventListener('click', () => {
+    const isDark = !document.body.classList.contains('dark-mode');
+    applyDarkMode(isDark);
+    localStorage.setItem('darkMode', isDark);
+  });
+}
