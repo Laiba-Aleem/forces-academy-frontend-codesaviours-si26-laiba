@@ -171,22 +171,16 @@ body {
     padding: 0.35rem 0 !important;
     margin: 0 !important;
   }
-  
-  /* Active item: faint line hi gold ban jaye */
   .navbar-collapse .nav-item:has(.nav-link.active) {
     border-bottom: 2px solid var(--gold) !important;
   }
-  
-  /* Active item pe alag underline (::after) chupao */
   .navbar-collapse .nav-item:has(.nav-link.active) .nav-link::after {
     display: none !important;
   }
-  
   .navbar-collapse .nav-item:has(.dark-toggle-btn),
   .navbar-collapse .nav-item:has(.btn-portal) {
     border-bottom: none !important;
   }
-  
   .navbar-collapse .btn-portal {
     width: 100%;
     display: flex !important;
@@ -196,7 +190,6 @@ body {
     margin: 0.6rem 0 0 0 !important;
     text-align: center;
   }
-  
   .navbar-collapse .nav-item:has(.dark-toggle-btn) {
     display: flex;
     justify-content: center;
@@ -1128,6 +1121,8 @@ margin-bottom: 18px;
 }
 .announce-heading {
   color: var(--cream);
+  font-size: 2.5rem;   
+  font-weight: 900;
 }
 .announce-wrap {
   max-width: 780px;
@@ -1141,7 +1136,20 @@ margin-bottom: 18px;
 .announce-slide h3 {
   color: var(--cream);
   font-weight: 700;
-  margin-bottom: 16px;
+  margin-bottom: 6px;
+}
+.announce-date {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: var(--gold);
+  opacity: 0.85;
+  margin: 2px 0 18px 0;
+  border: none;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
 }
 .announce-slide p {
   color: #d8d5cb;
@@ -2082,6 +2090,58 @@ letter-spacing: 0.1em;
   padding: 14px 18px;
   color: var(--olive-dark);
   font-size: 0.92rem;
+}
+
+/* ------------ ADMISSION ENQUIRY FORM -------------- */
+.enquiry-card {
+  height: auto !important;
+  border: 1px solid rgba(200, 160, 78, 0.2) !important;
+  box-shadow: 0 12px 40px rgba(31, 36, 19, 0.08) !important;
+  border-radius: 16px !important;
+}
+#enquiryForm .form-control,
+#enquiryForm .form-select {
+  background-color: #faf9f6;
+  border: 1.5px solid #d4d0c7;
+  border-radius: 8px;
+  padding: 0.8rem 1rem;
+  color: var(--olive-darker);
+  font-size: 0.95rem;
+  transition: all 0.25s ease;
+}
+#enquiryForm .form-control:focus,
+#enquiryForm .form-select:focus {
+  background-color: #fff;
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(200, 160, 78, 0.12);
+  outline: none;
+}
+#enquiryForm .form-label {
+  color: var(--olive-darker);
+  font-size: 0.88rem;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
+/* FIXED SELECT DROPDOWN ARROW */
+#enquiryForm .form-select, #contactForm .form-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%233a4226' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 16px 12px;
+  padding-right: 2.5rem;
+}
+#enquiryForm textarea.form-control {
+  min-height: 100px;
+  resize: vertical;
+}
+#enquirySuccess {
+  background-color: rgba(58, 66, 38, 0.06);
+  border: 1px solid rgba(58, 66, 38, 0.15);
+  color: var(--olive-dark);
+  border-radius: 10px;
 }
 
 /* for modal to be on top of navbar */
@@ -3133,6 +3193,7 @@ body.dark-mode .video-subtitle,
 body.dark-mode .list-group-item,
 body.dark-mode .doc-list li,
 body.dark-mode .form-label,
+body.dark-mode #enquiryForm .form-label,
 body.dark-mode .stat-label,
 body.dark-mode .elig-body ul li,
 body.dark-mode .step-item p,
@@ -3197,6 +3258,8 @@ body.dark-mode .fp-meta {
 /* ---------------- FORMS & INPUTS ------------------*/
 body.dark-mode .form-control,
 body.dark-mode .form-select,
+body.dark-mode #enquiryForm .form-control,
+body.dark-mode #enquiryForm .form-select,
 body.dark-mode .modal-body input,
 body.dark-mode .modal-body select,
 body.dark-mode .modal-body textarea {
@@ -3205,11 +3268,15 @@ body.dark-mode .modal-body textarea {
   color: var(--dm-text);
 }
 body.dark-mode .form-control::placeholder,
-body.dark-mode .form-select::placeholder {
+body.dark-mode .form-select::placeholder,
+body.dark-mode #enquiryForm .form-control::placeholder,
+body.dark-mode #enquiryForm .form-select::placeholder {
   color: #888;
 }
 body.dark-mode .form-control:focus,
-body.dark-mode .form-select:focus {
+body.dark-mode .form-select:focus,
+body.dark-mode #enquiryForm .form-control:focus,
+body.dark-mode #enquiryForm .form-select:focus {
   background: rgba(30, 34, 22, 0.95);
   border-color: var(--gold);
 }
@@ -3365,7 +3432,7 @@ body.dark-mode .text-secondary {
   color: var(--dm-muted) !important;
 }
 
-/* ------------------ CONTACT PAGE FIXES ----------------- */
+/* ------------------ CONTACT PAGE ----------------- */
 /* Quick overrides */
 body.dark-mode { background-color: var(--dm-bg) !important; }
 body.dark-mode [style*="background-color: white"] { background-color: var(--dm-surface) !important; }
@@ -3420,4 +3487,17 @@ body.dark-mode .btn-gold2 {
 body.dark-mode .btn-gold2:hover {
   background: var(--gold-light) !important;
   border-color: var(--gold-light) !important;
+}
+/* ---------------- ENQUIRY FORM FIXES ---------------- */
+body.dark-mode .enquiry-card {
+  border-color: rgba(200, 160, 78, 0.15) !important;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;
+}
+body.dark-mode #enquirySuccess {
+  background-color: rgba(200, 160, 78, 0.1);
+  border-color: rgba(200, 160, 78, 0.2);
+  color: var(--dm-heading);
+}
+body.dark-mode .section2-padding[style*="background-color: var(--cream)"] {
+  background-color: var(--dm-surface) !important;
 }

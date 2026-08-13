@@ -70,9 +70,7 @@ if (leftRows.length || rightRows.length) {
     });
 }
 
-// ----------------------------------------------- CONTACT PAGE ------------------------------------------------
-
-// ------------- CONTACT FORM --------------
+// ------------- CONTACT FORM WITH EMAILJS --------------
 const contactForm = document.getElementById('contactForm');
 if (contactForm) {
     contactForm.addEventListener('submit', function (e) {
@@ -86,7 +84,7 @@ if (contactForm) {
 
         let valid = true;
 
-    // Name check
+        // Name check
         if (name.value.trim() === '') {
             name.classList.add('is-invalid');
             valid = false;
@@ -94,7 +92,7 @@ if (contactForm) {
             name.classList.remove('is-invalid');
             name.classList.add('is-valid');
         }
-    // Email check
+        // Email check
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email.value.trim())) {
             email.classList.add('is-invalid');
@@ -103,7 +101,7 @@ if (contactForm) {
             email.classList.remove('is-invalid');
             email.classList.add('is-valid');
         }
-    // Phone check
+        // Phone check
         const phoneValue = phone.value.trim();
         const phoneRegex = /^03\d{9}$/;
         if (
@@ -118,7 +116,7 @@ if (contactForm) {
             phone.classList.remove("is-invalid");
             phone.classList.add("is-valid");
         }
-    // Subject check
+        // Subject check
         if (subject.value === '') {
             subject.classList.add('is-invalid');
             valid = false;
@@ -126,9 +124,8 @@ if (contactForm) {
             subject.classList.remove('is-invalid');
             subject.classList.add('is-valid');
         }
-    // Message check (Min 10 characters required)
+        // Message check (Min 10 characters required)
         const messageValue = message.value.trim();
-
         if (messageValue.length < 10) {
             message.classList.remove('is-valid');
             message.classList.add('is-invalid');
@@ -137,12 +134,31 @@ if (contactForm) {
             message.classList.remove('is-invalid');
             message.classList.add('is-valid');
         }
-    // If all valid
+
+        // If all valid → Send via EmailJS
         if (valid) {
-            document.getElementById('formSuccess').classList.remove('d-none');
-            contactForm.reset();
-    // Remove green borders after reset
-            contactForm.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+            btn.disabled = true;
+
+            emailjs.sendForm('service_ds8bajf', 'template_q2fzpm4', contactForm)
+                .then(() => {
+                    document.getElementById('formSuccess').classList.remove('d-none');
+                    contactForm.reset();
+                    contactForm.querySelectorAll('.is-valid').forEach(el => el.classList.remove('is-valid'));
+                    setTimeout(() => {
+                        document.getElementById('formSuccess').classList.add('d-none');
+                    }, 5000);
+                })
+                .catch((err) => {
+                    console.error('EmailJS Error:', err);
+                    alert('Failed to send message. Please try again or WhatsApp us directly.');
+                })
+                .finally(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
         }
     });
 }
@@ -317,3 +333,39 @@ if (darkToggle) {
     localStorage.setItem('darkMode', isDark);
   });
 }
+
+/* ---------------------------------- EMAILJS — Admission Enquiry Form ---------------------------------------------*/
+
+(function() {
+  emailjs.init("GCnZ1RUbcjiNlMvfH");
+
+  const form = document.getElementById('enquiryForm');
+  if (!form) return;
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    const btn = this.querySelector('button[type="submit"]');
+    const originalText = btn.innerHTML;
+    btn.innerHTML = '<i class="bi bi-hourglass-split me-2"></i>Sending...';
+    btn.disabled = true;
+
+    // NAYI IDs yahan
+    emailjs.sendForm('service_ds8bajf', 'template_v6p2xie', this)
+      .then(() => {
+        document.getElementById('enquirySuccess').classList.remove('d-none');
+        this.reset();
+        setTimeout(() => {
+          document.getElementById('enquirySuccess').classList.add('d-none');
+        }, 5000);
+      })
+      .catch((err) => {
+        console.error('EmailJS Error:', err);
+        alert('Failed to send. Error: ' + (err.text || err.message || 'Unknown'));
+      })
+      .finally(() => {
+        btn.innerHTML = originalText;
+        btn.disabled = false;
+      });
+  });
+})();

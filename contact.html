@@ -79,7 +79,7 @@
             <a class="nav-link active" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-portal" href="#"><i class="bi bi-person-circle"></i> Student Portal</a>
+            <a class="btn btn-portal" href="https://forces-academy.infy.click/" target="_blank" rel="noopener noreferrer"><i class="bi bi-person-circle"></i> Student Portal</a>
           </li>
           <li class="nav-item d-flex align-items-center ps-2" style="border-left:1px solid rgba(200,160,78,0.2); margin-left:8px;">
             <button id="darkModeToggle" class="dark-toggle-btn" aria-label="Toggle dark mode">
@@ -197,46 +197,46 @@
           <h4 class="fw-bold mb-1">Send Us a Message</h4>
           <p class="text-muted mb-4">All fields are required.</p>
 
-          <form id="contactForm" novalidate>
-            <div class="row g-3">
-              <div class="col-12 col-xl-6">
-                <label class="form-label">Full Name</label>
-                <input type="text" class="form-control" id="contactName" placeholder="Enter your name">
-                <div class="invalid-feedback">Please enter your name.</div>
-              </div>
-              <div class="col-12 col-xl-6">
-                <label class="form-label">Email Address</label>
-                <input type="email" class="form-control" id="contactEmail" placeholder="your@email.com">
-                <div class="invalid-feedback">Please enter a valid email address.</div>
-              </div>
-              <div class="col-12 col-xl-6">
-                <label class="form-label">Phone Number</label>
-                <input type="tel" class="form-control" id="contactPhone" placeholder="03XX-XXXXXXX">
-                <div class="invalid-feedback">Please enter a valid phone number.</div>
-              </div>
-              <div class="col-12 col-xl-6">
-                <label class="form-label">Subject</label>
-                <select class="form-select" id="contactSubject">
-                  <option value="">Select a subject</option>
-                  <option>Admission Inquiry</option>
-                  <option>Course Information</option>
-                  <option>Fee Structure</option>
-                  <option>Other</option>
-                </select>
-                <div class="invalid-feedback">Please select a subject.</div>
-              </div>
-              <div class="col-12">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" id="contactMessage" rows="4"
-                  placeholder="Write your message (atleast 10 characters)"></textarea>
-                <div class="invalid-feedback">Message must be at least 10 characters long.</div>
-              </div>
-              <div class="col-12">
-                <button type="submit" class="btn btn-gold2 w-100 py-3 fw-semibold">
-                  <i class="bi bi-send me-2"></i>Send Message</button>
-              </div>
-            </div>
-          </form>
+  <form id="contactForm" novalidate>
+  <div class="row g-3">
+    <div class="col-12 col-xl-6">
+      <label class="form-label">Full Name</label>
+      <input type="text" name="from_name" class="form-control" id="contactName" placeholder="Enter your name">
+      <div class="invalid-feedback">Please enter your name.</div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <label class="form-label">Email Address</label>
+      <input type="email" name="from_email" class="form-control" id="contactEmail" placeholder="your@email.com">
+      <div class="invalid-feedback">Please enter a valid email address.</div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <label class="form-label">Phone Number</label>
+      <input type="tel" name="phone" class="form-control" id="contactPhone" placeholder="03XX-XXXXXXX">
+      <div class="invalid-feedback">Please enter a valid phone number.</div>
+    </div>
+    <div class="col-12 col-xl-6">
+      <label class="form-label">Subject</label>
+      <select name="subject" class="form-select" id="contactSubject">
+        <option value="">Select a subject</option>
+        <option>Admission Inquiry</option>
+        <option>Course Information</option>
+        <option>Fee Structure</option>
+        <option>Other</option>
+      </select>
+      <div class="invalid-feedback">Please select a subject.</div>
+    </div>
+    <div class="col-12">
+      <label class="form-label">Message</label>
+      <textarea name="message" class="form-control" id="contactMessage" rows="4"
+        placeholder="Write your message (atleast 10 characters)"></textarea>
+      <div class="invalid-feedback">Message must be at least 10 characters long.</div>
+    </div>
+    <div class="col-12">
+      <button type="submit" class="btn btn-gold2 w-100 py-3 fw-semibold">
+        <i class="bi bi-send me-2"></i>Send Message</button>
+    </div>
+  </div>
+</form>
 
           <!-- Success message — hidden by default -->
           <div id="formSuccess" class="alert alert-success mt-3 d-none">
@@ -441,6 +441,8 @@
     });</script>
   <!-- 3. Vanilla Tilt JS -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Our script -->
   <script src="js/main.js"></script>
   

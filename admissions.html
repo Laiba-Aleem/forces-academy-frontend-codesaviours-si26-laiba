@@ -79,7 +79,7 @@
             <a class="nav-link" href="contact.html">Contact</a>
           </li>
           <li class="nav-item">
-            <a class="btn btn-portal" href="#"><i class="bi bi-person-circle"></i> Student Portal</a>
+            <a class="btn btn-portal" href="https://forces-academy.infy.click/" target="_blank" rel="noopener noreferrer"><i class="bi bi-person-circle"></i> Student Portal</a>
           </li>
           <li class="nav-item d-flex align-items-center ps-2" style="border-left:1px solid rgba(200,160,78,0.2); margin-left:8px;">
             <button id="darkModeToggle" class="dark-toggle-btn" aria-label="Toggle dark mode">
@@ -585,7 +585,68 @@
       </div>
     </div>
   </section>
-
+<!-------------------------------- Enquiry Form Section -------------------------------->
+<section class="section-padding section2-padding" style="background-color: var(--cream);">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        
+        <div class="text-center mb-4" data-aos="fade-up">
+          <p class="section-eyebrow">Get In Touch</p>
+          <h2 class="section-title fw-bold">Admission Enquiry</h2>
+          <p class="text-muted mt-2">Have questions about admissions? Send us a message and we'll get back to you.</p>
+          <div class="title-underline mx-auto"></div>
+        </div>
+        <div class="card enquiry-card p-4 shadow-sm mb-5" data-aos="fade-up">
+          <form id="enquiryForm">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Full Name</label>
+                <input type="text" name="from_name" class="form-control" placeholder="Enter your name" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Email Address</label>
+                <input type="email" name="from_email" class="form-control" placeholder="your@email.com" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Phone Number</label>
+                <input type="tel" name="phone" class="form-control" placeholder="03XX-XXXXXXX" required>
+              </div>
+              <div class="col-md-6">
+                <label class="form-label fw-semibold">Interested Course</label>
+                <select name="course" class="form-select" required>
+                  <option value="">Select a course</option>
+                  <option>PMA Long Course Preparation</option>
+                  <option>AFNS Preparation</option>
+                  <option>Lady Cadet Course (LCC)</option>
+                  <option>PAF & Pak Navy Test Prep</option>
+                  <option>ISSB & GTO Course</option>
+                  <option>Medical Cadet Course</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label fw-semibold">Your Message</label>
+                <textarea name="message" class="form-control" rows="3" placeholder="Ask about admissions, fees, eligibility..." required></textarea>
+              </div>
+              <div class="col-12 text-center mt-3">
+                <button type="submit" class="btn btn-gold px-5 py-2 fw-semibold">
+                  <i class="bi bi-send me-2"></i>Send Enquiry
+                </button>
+              </div>
+            </div>
+          </form>
+          <!-- Success Alert -->
+          <div id="enquirySuccess" class="alert alert-success mt-3 d-none text-center">
+            <i class="bi bi-check-circle me-2"></i>
+            Enquiry sent successfully! We'll contact you soon.
+          </div>
+          <!-- Spacer to prevent card stretch -->
+          <div style="height: 1px;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
   <!------------------------------ Call To Action ---------------------------->
   <section class="cta-section courses-cta-bg adm-cta">
   <div class="container" data-aos="zoom-in">
@@ -750,6 +811,8 @@
     });</script>
   <!-- Vanilla Tilt JS -->
   <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+  <!-- Email.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
   <!-- Our script -->
   <script src="js/main.js"></script>
 
