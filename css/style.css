@@ -179,7 +179,6 @@ body {
   transform: scale(0.94);
 }
 @media (max-width: 991px) {
-  /* ---- Nav items (same as before) ---- */
   .navbar-collapse .nav-item {
     border-bottom: 1px solid rgba(200, 160, 78, 0.12) !important;
     padding: 0.35rem 0 !important;
@@ -214,9 +213,7 @@ body {
     margin: 0 !important;
   }
 
-  /* ============================================
-     1. TRANSPARENT NAVBAR: Frosted Glass
-     ============================================ */
+  /*------------------- 1. TRANSPARENT NAVBAR: Frosted Glass -----------------*/
   #mainNav.nav-transparent:not(.nav-scrolled) .navbar-collapse.show,
   #mainNav.nav-transparent:not(.nav-scrolled) .navbar-collapse.collapsing {
     position: absolute;
@@ -241,10 +238,7 @@ body {
     text-shadow: none;
     padding: 14px 0 !important;
   }
-
-  /* ============================================
-     2. SOLID NAVBAR: Original Background + New Shape
-     ============================================ */
+  /* ------------------- 2. SOLID NAVBAR -----------------------*/
   #mainNav:not(.nav-transparent) .navbar-collapse.show,
   #mainNav:not(.nav-transparent) .navbar-collapse.collapsing,
   #mainNav.nav-scrolled .navbar-collapse.show,
@@ -254,7 +248,6 @@ body {
     transform: translateX(-50%);
     width: 100vw;
     top: 100%;
-    /* EXACT same background as your original #mainNav — NO changes */
     background: linear-gradient(135deg, rgba(31, 36, 19, 1) 70%, rgba(131, 120, 46, 1) 100%);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(9px);
@@ -3560,7 +3553,7 @@ body.dark-mode .btn-gold2:hover {
   background: var(--gold-light) !important;
   border-color: var(--gold-light) !important;
 }
-/* ---------------- ENQUIRY FORM FIXES ---------------- */
+/* ---------------- ENQUIRY FORM ---------------- */
 body.dark-mode .enquiry-card {
   border-color: rgba(200, 160, 78, 0.15) !important;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2) !important;

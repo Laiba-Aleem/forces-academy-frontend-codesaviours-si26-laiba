@@ -135,7 +135,7 @@ if (contactForm) {
             message.classList.add('is-valid');
         }
 
-        // If all valid → Send via EmailJS
+        // If all valid then Send via EmailJS
         if (valid) {
             const btn = contactForm.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
