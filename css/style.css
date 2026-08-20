@@ -1120,7 +1120,7 @@ a.btn.btn-gold:hover::before,
 }
 .stat-box {
   text-align: center;
-  padding: 20px;
+  padding: 15px 20px;
 }
 .stat-number {
   font-size: 3rem;
@@ -1150,6 +1150,34 @@ margin-bottom: 18px;
   height: 2px;
   background: var(--gold);
   opacity: .8;
+}
+/* Stats Heading */
+
+.stats-heading {
+  max-width: 650px;
+  margin: 0 auto;
+  margin-bottom: 20px !important;
+
+}
+.stats-eyebrow {
+  color: var(--gold-light);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 3px;
+  margin-bottom: 8px;
+}
+.stats-heading h2 {
+  color: var(--cream);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 10px;
+}
+.stats-intro {
+  color: #d8d5cb;
+  font-size: .9rem;
+  opacity: .85;
+  margin-bottom: 0;
 }
 
 /* ------------------------------------------- ANNOUNCEMENTS SECTION ------------------------------------------- */
@@ -1276,7 +1304,94 @@ margin-bottom: 18px;
   .announce-wrap { padding: 0 50px; }
   .announce-arrow { width: 38px; height: 38px; }
 }
+/* --------------------------------- WORKSHOP DETAILS MODAL -------------------------------- */
 
+#workshopModal .modal-content {
+  background-color: var(--cream);
+  color: var(--olive-darker);
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+#workshopModal .modal-header {
+  border-bottom: none;
+}
+
+#workshopModal .modal-body {
+  color: var(--olive-darker);
+}
+
+/* Intro paragraph */
+#workshopModal .modal-body > p {
+  color: #4a4a42;
+  line-height: 1.7;
+}
+
+/* Workshop information boxes */
+#workshopModal .modal-body .border {
+  border-color: #d8d5c9 !important;
+  background-color: #fff;
+}
+
+#workshopModal .modal-body .border small {
+  color: #77776d !important;
+  margin-bottom: 5px;
+}
+
+#workshopModal .modal-body .border strong {
+  color: var(--olive-dark) !important;
+}
+
+/* Icons */
+#workshopModal .modal-body i {
+  color: var(--gold-dark);
+}
+
+/* Workshop Includes heading */
+#workshopModal h6 {
+  color: var(--olive-dark);
+}
+
+/* Workshop list */
+#workshopModal ul {
+  color: #4a4a42;
+  padding-left: 22px;
+}
+
+#workshopModal li {
+  margin-bottom: 8px;
+}
+
+/* Registration section */
+#workshopModal .border-top {
+  border-color: #d8d5c9 !important;
+}
+
+#workshopModal .form-label {
+  color: var(--olive-dark);
+}
+
+#workshopModal .form-control {
+  color: var(--olive-darker);
+  background-color: #fff;
+  border: 1px solid #d3d0c4;
+}
+
+#workshopModal .form-control::placeholder {
+  color: #99998f;
+}
+
+#workshopModal .form-control:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 0.2rem rgba(200, 160, 78, 0.15);
+}
+
+/* Footer */
+#workshopModal .modal-footer {
+  border-top: 1px solid #d8d5c9;
+  background-color: #f1efe7;
+}
 /* ------------------------------------------- TESTIMONIALS SECTION ------------------------------------------- */
 .testimonials-section {
   background: linear-gradient(160deg, var(--cream) 0%, #fbf1de 55%, var(--cream) 100%);
@@ -1546,21 +1661,20 @@ margin-bottom: 18px;
 }
 
 /* --------------------------------------------------- FOOTER --------------------------------------------------*/
-
 .site-footer {
   background-color: var(--olive-darker);
   color: #e8e6dd;
   padding: 60px 0 20px 0;
 }
-.site-footer h5 {
+.footer-col-title {
   color: var(--cream);
-  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0 0 20px 0;
 }
 .site-footer a {
   color: #e8e6dd;
-  transition:
-    color 0.25s ease,
-    padding-left 0.25s ease;
+  transition: color 0.25s ease, padding-left 0.25s ease;
 }
 .site-footer a:hover {
   color: var(--gold-light);
@@ -1938,58 +2052,83 @@ letter-spacing: 0.1em;
 } 
 
 /* ----------- admission steps ----------- */
-.step-item { padding-top: 24px; }
+.step-item {
+  padding-top: 24px;
+}
 .step-icon-badge {
   position: relative;
-  width: 64px;
-  height: 64px;
+  width: 62px;
+  height: 62px;
   border-radius: 50%;
   background: var(--olive-dark);
-  border: 2px solid var(--gold);
+  border: 1px solid var(--gold);
   color: var(--gold-light);
   font-size: 1.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  z-index: 2;   
+  z-index: 2;
+  transition:
+    box-shadow 0.35s ease,
+    background-color 0.35s ease,
+    color 0.35s ease;
 }
 .step-index {
   position: absolute;
-  top: -4px;
-  right: -8px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  top: -8px;
+  right: -10px;
+  width: 28px;
+  height: 20px;
+  border-radius: 3px;
   background: var(--gold);
   color: var(--olive-darker);
-  font-size: .68rem;
+  font-size: .65rem;
   font-weight: 800;
+  letter-spacing: .5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid rgb(241,241,235);
+  border: 1px solid rgb(241,241,235);
   z-index: 3;
 }
+.step-item h5 {
+  margin-top: 18px !important;
+  margin-bottom: 8px;
+}
+.step-item p {
+  max-width: 220px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+/* ---------- hover interaction ---------- */
+.step-item:hover .step-icon-badge {
+  background-color: var(--olive);
+  color: var(--gold-light);
+  box-shadow: 0 8px 22px rgba(200, 160, 78, 0.18);
+}
+/* ---------- connector line ---------- */
 @media (min-width: 992px) {
-  .apply-steps-row { position: relative; }
+  .apply-steps-row {
+    position: relative;
+  }
   .apply-steps-row::before {
     content: "";
     position: absolute;
-    top: 56px;              /* badge vertical-center */
+    top: 56px;
     left: 12.5%;
     right: 12.5%;
-    border-top: 2px dashed var(--gold) !important;
-    z-index: 1;            
+    border-top: 1px dashed rgba(200, 160, 78, 0.65);
+    z-index: 1;
   }
-  @media (min-width: 992px) {
+  /* ---------- alternating step positions ---------- */
   .apply-steps-row > div:nth-child(odd) .step-icon-badge {
-    transform: translateY(-58px);  
+    transform: translateY(-58px);
   }
   .apply-steps-row > div:nth-child(even) .step-icon-badge {
-    transform: translateY(12px); 
+    transform: translateY(12px);
   }
-}
 }
 /*------------------------------- fee table -----------------------------------------*/
 .fee-table th {
@@ -2452,6 +2591,135 @@ letter-spacing: 0.1em;
   background-color: var(--cream) !important;
   color: #a19f99 !important;
   border-color: #e6dfd3 !important;
+}
+.results-summary-section {
+  background: var(--cream);
+}
+.result-stat-card {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-top: 3px solid var(--gold-light);
+  border-radius: 12px;
+  padding: 24px 16px;
+  text-align: center;
+  height: 100%;
+}
+.result-stat-card i {
+  font-size: 1.8rem;
+  color: var(--gold-dark);
+  display: block;
+  margin-bottom: 10px;
+}
+.result-stat-card .stat-value {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--olive-darker);
+}
+.result-stat-card .stat-label {
+  font-size: .8rem;
+  color: #5c5c50;
+}
+
+.result-panel {
+  background: #fff;
+  border: 1px solid rgba(0,0,0,.08);
+  border-radius: 12px;
+  padding: 30px;
+  height: 100%;
+}
+
+/* Pure-CSS bar chart — no library */
+.css-bar-chart {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  height: 200px;
+  gap: 20px;
+}
+.bar-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+.bar-track {
+  width: 100%;
+  max-width: 50px;
+  height: 150px;
+  background: #efece3;
+  border-radius: 6px 6px 0 0;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+.bar-fill {
+  width: 100%;
+  background: linear-gradient(to top, var(--olive-dark), var(--gold));
+  border-radius: 6px 6px 0 0;
+  transition: height 1s ease-out;
+}
+.bar-pct {
+  margin-top: 8px;
+  font-weight: 700;
+  color: var(--olive-darker);
+  font-size: .85rem;
+}
+.bar-label {
+  font-size: .78rem;
+  color: #8a8a7d;
+  margin-top: 2px;
+}
+
+.upcoming-dates-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.upcoming-dates-list li {
+  border-bottom: 1px dashed rgba(200,160,78,.35);
+}
+.upcoming-dates-list li:last-child { border-bottom: none; }
+
+.date-item {
+  display: flex;
+  flex-direction: column;  
+  gap: 6px;
+  padding: 12px 0;
+  text-decoration: none;
+  color: var(--olive-dark);
+  font-size: .9rem;
+  transition: color .2s ease;
+}
+.date-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.date-tag {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;    
+  background: var(--gold);
+  color: var(--olive-darker);
+  font-weight: 700;
+  font-size: .75rem;
+  padding: 3px 10px;
+  border-radius: 20px;
+}
+.date-arrow {
+  opacity: 0;
+  transition: opacity .2s ease;
+  font-size: .8rem;
+}
+.date-item:hover {
+  color: var(--gold-dark);
+}
+.date-item:hover .date-arrow {
+  opacity: 1;
+}
+.date-desc {
+  line-height: 1.4;
 }
 
 /* ------------------------------------------------GALLERY PAGE -------------------------------------------------*/
@@ -3205,7 +3473,9 @@ body.dark-mode .contact-card,
 body.dark-mode .testimonial-card,
 body.dark-mode .modal-content,
 body.dark-mode .unified-bar,
-body.dark-mode .table-responsive.bg-white {
+body.dark-mode .table-responsive.bg-white,
+body.dark-mode .result-stat-card,    
+body.dark-mode .result-panel {
   background-color: var(--dm-card);
   border: 1px solid var(--dm-border);
 }
@@ -3248,6 +3518,7 @@ body.dark-mode .testimonial-name,
 body.dark-mode .announce-slide h3,
 body.dark-mode .cta-text h2,
 body.dark-mode .elig-header h5,
+body.dark-mode .modal-txt,
 body.dark-mode .doc-card-header h5 {
   color: var(--dm-heading) !important;
 }
@@ -3262,8 +3533,13 @@ body.dark-mode #enquiryForm .form-label,
 body.dark-mode .stat-label,
 body.dark-mode .elig-body ul li,
 body.dark-mode .step-item p,
+body.dark-mode .stat-value,
+body.dark-mode .bar-pct,
+body.dark-mode .upcoming-dates-list li,
+body.dark-mode .text-muted,
+body.dark-mode .date-item,
 body.dark-mode [style*="color:#363830"] {
-  color: var(--dm-muted);
+  color: var(--dm-muted) !important;
 }
 body.dark-mode .text-dark {
   color: var(--dm-text) !important;
@@ -3286,7 +3562,7 @@ body.dark-mode .testimonial-text {
 body.dark-mode .testimonial-meta {
   color: var(--gold-light) !important;
 }
-body.dark-mode .testimonial-arrow-btn {
+body.dark-mode .testimonial-arrow-btn{
   border-color: rgba(246, 244, 238, 0.4);
   color: rgba(246, 244, 238, 0.6);
 }
@@ -3565,4 +3841,20 @@ body.dark-mode #enquirySuccess {
 }
 body.dark-mode .section2-padding[style*="background-color: var(--cream)"] {
   background-color: var(--dm-surface) !important;
+}
+/* home page workshop modal */
+body.dark-mode .modal-body .border {
+  border-color: rgba(255,255,255,.12) !important;
+}
+body.dark-mode .modal-gold-heading{
+  color: var(--gold-dark) !important;
+}
+body.dark-mode .modal-light-gold-heading{
+  color: var(--gold-light) !important;
+}
+body.dark-mode .modal-small-box{
+  background: #b6b6ae !important;
+}
+body.dark-mode .modal-form{
+  background: #f0e1e1 !important;
 }
