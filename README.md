@@ -39,16 +39,16 @@ A responsive, multi-page frontend website built for Forces Academy Faisalabad, d
 **FAQ & Contact Form** — Accordion-based questions, message form, and WhatsApp integration.
 <img width="834" height="521" alt="contact" src="https://github.com/user-attachments/assets/1feadd8f-4fb7-464c-abb8-e8b129ae226f" />
 
-## 📄 Website Pages
+##  Website Pages
 | Page | Description |
 |---|---|
-| 🏠 Home | Cinematic video hero, "Why Choose Us," animated stats, testimonials, and latest announcements |
-| ℹ️ About | Academy legacy, mission, and leadership |
-| 📚 Courses | Six specialized programs with a quick-jump index and detailed course cards |
-| 📝 Admissions | Application steps, eligibility, required documents, fees, FAQ, and a live enquiry form |
-| 📊 Results | Merit list, performance stats, and course-wise results overview |
-| 🖼️ Gallery | Filterable photo gallery with lightbox |
-| 📞 Contact | Contact form, FAQ, and location details |
+|  Home | Cinematic video hero, "Why Choose Us," animated stats, testimonials, and latest announcements |
+|  About | Academy legacy, mission, and leadership |
+|  Courses | Six specialized programs with a quick-jump index and detailed course cards |
+|  Admissions | Application steps, eligibility, required documents, fees, FAQ, and a live enquiry form |
+|  Results | Merit list, performance stats, and course-wise results overview |
+|  Gallery | Filterable photo gallery with lightbox |
+|  Contact | Contact form, FAQ, and location details |
 
 ## Tech Stack
 
@@ -123,7 +123,7 @@ Responsive testing performed via Chrome DevTools device emulation and real-devic
 - Tablet (iPad Air)
 - Mobile — iPhone 12 Pro (390px) down to Samsung Galaxy S8+ (360px)
 
-**The debugging story:** during final mobile testing, a subtle horizontal-scroll bug appeared on two pages — but only on the narrowest viewports, and only intermittently. Rather than guessing at fixes, I wrote a small browser-console script to scan the live DOM and flag the exact element(s) overflowing the viewport, down to the pixel. That traced the root cause to a missing responsive grid class on one section — a one-line fix that would have been very hard to find by inspection alone. This became my go-to debugging approach for the rest of the project: measure first, fix second.
+**The debugging story:** during final mobile testing, a subtle horizontal-scroll bug appeared on two pages — but only on the narrowest viewports, and only intermittently. Rather than guessing at fixes, I wrote a small browser-console script to scan the live DOM and flag the exact element(s) overflowing the viewport, down to the pixel. That traced the root cause to a missing responsive grid class on one section, a one-line fix that would have been very hard to find by inspection alone. This became my go-to debugging approach for the rest of the project: measure first, fix second.
 
 ## 📁 Project Structure
 ```
@@ -143,7 +143,7 @@ Responsive testing performed via Chrome DevTools device emulation and real-devic
 
 ## Future Improvements
 - Results table's PDF-download button and pagination are currently static — full functionality would require backend/database integration.
-- This project was intentionally scoped to frontend only, as part of the Frontend Track — the Student Portal links to a live LMS backend built by a Full Stack teammate. Going forward, I'm working toward becoming a full-stack (PERN) developer, and building out backend functionality myself — real data persistence, authentication — is a natural next step in that journey.
+- This project was intentionally scoped to frontend only, as part of the Frontend Track — the Student Portal links to a live LMS backend built by a Full Stack teammate. Going forward, I'm working toward becoming a full-stack developer, and building out backend functionality myself(real data persistence, authentication) is a natural next step in that journey.
 
 ## 👤 Built By
 **Laiba Aleem** | Code Saviours SI-26 | 2026
